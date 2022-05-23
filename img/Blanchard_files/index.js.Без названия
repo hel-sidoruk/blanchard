@@ -1,0 +1,74 @@
+// header dropdowns
+
+const dropdownSelects = document.querySelectorAll('.dropdown__select')
+
+
+dropdownSelects.forEach(function(dropdownSelect){
+  dropdownSelect.addEventListener('click', function(){
+    dropdownSelect.classList.toggle('dropdown__select--active')
+  })
+})
+
+// scrollbar
+
+const simple = new SimpleBar(document.getElementById('scrollbar'), {
+  scrollbarMaxSize: 28
+})
+
+const simple2 = new SimpleBar(document.getElementById('scrollbar2'), {
+  scrollbarMaxSize: 28
+})
+
+const simple3 = new SimpleBar(document.getElementById('scrollbar3'), {
+  scrollbarMaxSize: 28
+})
+
+const simple4 = new SimpleBar(document.getElementById('scrollbar4'), {
+  scrollbarMaxSize: 28
+})
+
+const simple5 = new SimpleBar(document.getElementById('scrollbar5'), {
+  scrollbarMaxSize: 28
+})
+
+// gallery
+// Надо будет переделать код , чтоб не повторять то, что написано выше
+
+const galleryDropdown = document.querySelector('.gallery__dropdown-select')
+const dropdownTitle = document.querySelector('.gallery__dropdown-title')
+const dropdownItems = document.querySelectorAll('.gallery__dropdown-item')
+
+galleryDropdown.addEventListener('click', function(){
+  galleryDropdown.classList.toggle('gallery__dropdown-select--active')
+})
+
+dropdownItems.forEach(function(dropdownItem){
+  dropdownItem.addEventListener('click', function(){
+    let text = dropdownTitle.innerHTML
+    dropdownTitle.innerHTML = dropdownItem.innerHTML
+    dropdownItem.innerHTML = text
+    galleryDropdown.classList.toggle('gallery__dropdown-select--active')
+  })
+})
+
+// gallery slider
+
+const nextEl = document.getElementById("next");
+const prevEl = document.getElementById("prev");
+const imageCount = document.getElementById("image__count")
+const imageContainer = document.querySelector(".image__container");
+
+
+nextEl.addEventListener("click", () => {
+  imageContainer.style.transform = `translateX(-1200px)`;
+  imageCount.innerText = '2/2'
+  nextEl.disabled = true
+  prevEl.disabled = false
+});
+
+prevEl.addEventListener("click", () => {
+  imageContainer.style.transform = `translateX(0px)`;
+  imageCount.innerText = '1/2'
+  nextEl.disabled = false
+  prevEl.disabled = true
+});
