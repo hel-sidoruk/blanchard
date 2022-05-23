@@ -172,15 +172,14 @@ h4 {
 
 .header__content {
   align-items: center;
-  justify-content: space-between;
-}
-
-.header__left {
-  align-items: center;
 }
 
 .header__logo {
   margin-right: 179px;
+}
+
+.header__nav {
+  width: 100%;
 }
 
 .header__item:not(:last-child) {
