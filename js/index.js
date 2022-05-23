@@ -1,38 +1,26 @@
 // burger
 
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".header__nav");
+const menuLinks = document.querySelectorAll(".list__link");
 
-const burger = document.querySelector('.burger')
-const menu = document.querySelector('.header__nav')
-const menuLinks = document.querySelectorAll('.list__link')
+burger.addEventListener("click", function () {
+  burger.classList.toggle("burger--active");
 
-burger.addEventListener('click', function(){
+  menu.classList.toggle("header__nav--active");
 
-  burger.classList.toggle('burger--active')
+  document.body.classList.toggle("stop-scroll");
+});
 
-  menu.classList.toggle('header__nav--active')
+menuLinks.forEach(function (link) {
+  link.addEventListener("click", function () {
+    burger.classList.remove("burger--active");
 
-  document.body.classList.toggle('stop-scroll')
-})
+    menu.classList.remove("header__nav--active");
 
-menuLinks.forEach(function(link){
-  link.addEventListener('click', function(){
-
-    burger.classList.remove('burger--active')
-
-    menu.classList.remove('header__nav--active')
-
-    document.body.classList.remove('stop-scroll')
-  })
-})
-
-
-
-
-
-
-
-
-
+    document.body.classList.remove("stop-scroll");
+  });
+});
 
 // header dropdowns
 const btns = document.querySelectorAll(".dropdown__select");
@@ -100,11 +88,9 @@ const simple5 = new SimpleBar(document.getElementById("scrollbar5"), {
   scrollbarMaxSize: 28,
 });
 
-
-
 // hero slider
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper(".swiper", {
   loop: true,
 
   // autoplay: {
@@ -117,9 +103,9 @@ const swiper = new Swiper('.swiper', {
   speed: 800,
 
   a11y: {
-    paginationBulletMessage: 'Слайд {{index}}'
+    paginationBulletMessage: "Слайд {{index}}",
   },
-})
+});
 
 // gallery slider
 
@@ -129,24 +115,49 @@ const swiperGallery = new Swiper(".swiper__gallery", {
     type: "fraction",
   },
 
-  slidesPerView: 3,
-  spaceBetween: 50,
-  slidesPerGroup: 3,
   speed: 800,
 
   navigation: {
     nextEl: ".gallery__swiper-button-next",
     prevEl: ".gallery__swiper-button-prev",
   },
-});
 
+  slidesPerView: 3,
+  spaceBetween: 50,
+  slidesPerGroup: 3,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      slidesPerGroup: 1,
+    },
+    577: {
+      slidesPerView: 2,
+      spaceBetween: 39,
+      slidesPerGroup: 2,
+    },
+
+    769: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+      slidesPerGroup: 2,
+    },
+  },
+});
 
 // actions slider
 
-const swiperActions = new Swiper('.swiper__actions', {
+const swiperActions = new Swiper(".swiper__actions", {
   navigation: {
-    nextEl: '.btn__next',
-    prevEl: '.btn__prev',
+    nextEl: ".btn__next",
+    prevEl: ".btn__prev",
+  },
+
+  pagination: {
+    el: ".actions__swiper-pagination",
+    type: "bullets",
+    clickable: true,
   },
 
   speed: 600,
@@ -154,19 +165,33 @@ const swiperActions = new Swiper('.swiper__actions', {
   slidesPerView: 3,
   spaceBetween: 50,
 
-  a11y: {
-    paginationBulletMessage: 'Слайд {{index}}'
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+    577: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
+
+    769: {
+      spaceBetween: 27,
+    },
   },
-})
+  a11y: {
+    paginationBulletMessage: "Слайд {{index}}",
+  },
+});
 
 // partners slider
 
-const swiperPartners = new Swiper('.swiper-partners', {
+const swiperPartners = new Swiper(".swiper-partners", {
   loop: false,
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
   speed: 600,
@@ -175,9 +200,24 @@ const swiperPartners = new Swiper('.swiper-partners', {
   spaceBetween: 50,
 
   a11y: {
-    paginationBulletMessage: 'Слайд {{index}}'
+    paginationBulletMessage: "Слайд {{index}}",
   },
-})
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+    577: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
+    769: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+  },
+});
 
 // gallery dropdown
 // Надо будет написать одну функцию
@@ -186,15 +226,15 @@ const galleryDropdown = document.querySelector(".gallery__dropdown-select");
 const dropdownTitle = document.querySelector(".gallery__dropdown-title");
 const dropdownItems = document.querySelectorAll(".gallery__dropdown-item");
 
-galleryDropdown.addEventListener("click", ()=>{
-  updateDropdown()
+galleryDropdown.addEventListener("click", () => {
+  updateDropdown();
 });
 
-galleryDropdown.addEventListener("keypress", ()=>{
-  updateDropdown()
+galleryDropdown.addEventListener("keypress", () => {
+  updateDropdown();
 });
 
-function updateDropdown () {
+function updateDropdown() {
   galleryDropdown.classList.toggle("gallery__dropdown-select--active");
   if (galleryDropdown.classList.contains("gallery__dropdown-select--active")) {
     dropdownItems.forEach((dropdownItem) => {
@@ -224,7 +264,6 @@ dropdownItems.forEach(function (dropdownItem) {
     galleryDropdown.classList.toggle("gallery__dropdown-select--active");
   });
 });
-
 
 // tooltip
 

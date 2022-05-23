@@ -20,87 +20,87 @@
       href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/media.css" />
   </head>
   <body>
     <header class="header">
       <div class="header__top">
         <div class="container">
-            <div class="header__content flex">
-              <button class="burger button">
-                <div class="burger__line"></div>
-                <div class="burger__line"></div>
-                <div class="burger__line"></div>
-              </button>
-              <a class="logo header__logo" href="#" aria-label="Логотип">
-                <picture>
-                  <source media="(min-width: 1025px)" srcset="img/logo.svg" />
-                  <source
-                    media="(min-width: 577px)"
-                    srcset="img/logo-1024.svg"
+          <div class="header__content flex">
+            <button class="burger button">
+              <div class="burger__line"></div>
+              <div class="burger__line"></div>
+              <div class="burger__line"></div>
+            </button>
+            <a class="logo header__logo" href="#" aria-label="Логотип">
+              <picture>
+                <source media="(min-width: 1025px)" srcset="img/logo.svg" />
+                <source media="(min-width: 577px)" srcset="img/logo-1024.svg" />
+                <source media="(max-width: 576px)" srcset="img/logo-320.svg" />
+                <img class="logo__image" src="img/logo.svg" alt="Logo" />
+              </picture>
+            </a>
+            <nav class="header__nav flex">
+              <ul class="list header__list flex">
+                <li class="list__item header__item">
+                  <a class="list__link header__link" href="#about">
+                    О&nbsp;нас
+                  </a>
+                </li>
+                <li class="list__item header__item">
+                  <a class="list__link header__link" href="#gallery">
+                    Галерея
+                  </a>
+                </li>
+                <li class="list__item header__item">
+                  <a class="list__link header__link" href="#catalog">
+                    Каталог
+                  </a>
+                </li>
+                <li class="list__item header__item">
+                  <a class="list__link header__link" href="#actions">
+                    События
+                  </a>
+                </li>
+                <li class="list__item header__item">
+                  <a class="list__link header__link" href="#projects">
+                    Проекты
+                  </a>
+                </li>
+                <li class="list__item header__item">
+                  <a class="list__link header__link" href="#contacts">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+              <a class="header__link personal__link" href="#">
+                <svg
+                  width="13"
+                  height="13"
+                  viewbox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                    fill="white"
                   />
-                  <source
-                    media="(max-width: 576px)"
-                    srcset="img/logo-320.svg"
-                  />
-                  <img class="logo__image" src="img/logo.svg" alt="Logo" />
-                </picture>
+                </svg>
+                Войти
               </a>
-              <nav class="header__nav flex">
-                <ul class="list header__list flex">
-                  <li class="list__item header__item">
-                    <a class="list__link header__link" href="#about">
-                      О&nbsp;нас
-                    </a>
-                  </li>
-                  <li class="list__item header__item">
-                    <a class="list__link header__link" href="#gallery">
-                      Галерея
-                    </a>
-                  </li>
-                  <li class="list__item header__item">
-                    <a class="list__link header__link" href="#catalog">
-                      Каталог
-                    </a>
-                  </li>
-                  <li class="list__item header__item">
-                    <a class="list__link header__link" href="#actions">
-                      События
-                    </a>
-                  </li>
-                  <li class="list__item header__item">
-                    <a class="list__link header__link" href="#projects">
-                      Проекты
-                    </a>
-                  </li>
-                  <li class="list__item header__item">
-                    <a class="list__link header__link" href="#contacts">
-                      Контакты
-                    </a>
-                  </li>
-                </ul>
-                <a class="header__link personal__link" href="#">
-                  <svg
-                    width="13"
-                    height="13"
-                    viewbox="0 0 13 13"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
-                      fill="white"
-                    />
-                  </svg>
-                  Войти
-                </a>
-              </nav>
+            </nav>
+            <div class="searchbar__top">
+              <svg width="30" height="29" viewbox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+              </svg>
             </div>
+          </div>
         </div>
       </div>
       <div class="header__bottom">
         <div class="container">
-          <div class="header__content flex">
+          <div class="header__content__bottom flex">
             <nav class="header__nav-bottom flex">
               <div class="dropdown__block">
                 <div class="dropdown__select flex" data-id="step1" tabindex="0">
@@ -647,7 +647,7 @@
       </section>
 
       <section class="gallery section__offset" id="gallery">
-        <div class="container flex">
+        <div class="container gallery__container flex">
           <div class="gallery__left flex">
             <div class="gallery__top">
               <h2 class="gallery__title section__title">Галерея</h2>
@@ -703,7 +703,9 @@
                     name="checkbox"
                     id="check3"
                   />
-                  <span class="text1 gallery__span" tabindex="0"> Современность </span>
+                  <span class="text1 gallery__span" tabindex="0">
+                    Современность
+                  </span>
                 </label>
               </li>
             </ul>
@@ -711,28 +713,146 @@
           <div class="gallery__right">
             <div class="swiper__gallery">
               <div class="swiper__top flex">
-                <button class="button gallery__swiper-button-prev gallery__button gallery__btn-l"></button>
+                <button
+                  class="button gallery__swiper-button-prev gallery__button gallery__btn-l"
+                ></button>
                 <div class="gallery__swiper-pagination"></div>
-                <button class="button gallery__swiper-button-next gallery__button gallery__btn-r"></button>
+                <button
+                  class="button gallery__swiper-button-next gallery__button gallery__btn-r"
+                ></button>
               </div>
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="gallery__image" tabindex="0" style="background-image: url(img/gal1.jpg)"></div>
+                  <picture>
+                    <source media="(min-width: 1025px)" srcset="img/gal1.jpg" />
+                    <source
+                      media="(min-width: 769px)"
+                      srcset="img/gallery/g-1024-1.jpg"
+                    />
+                    <source
+                      media="(min-width: 577px)"
+                      srcset="img/gallery/g-768-1.jpg"
+                    />
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="img/gallery/g-576-1.jpg"
+                    />
+                    <img
+                      class="gallery__image"
+                      src="img/gal1.jpg"
+                      alt="Gallery"
+                    />
+                  </picture>
                 </div>
                 <div class="swiper-slide">
-                  <div class="gallery__image" tabindex="0" style="background-image: url(img/gal2.jpg)"></div>
+                  <picture>
+                    <source media="(min-width: 1025px)" srcset="img/gal2.jpg" />
+                    <source
+                      media="(min-width: 769px)"
+                      srcset="img/gallery/g-1024-2.jpg"
+                    />
+                    <source
+                      media="(min-width: 577px)"
+                      srcset="img/gallery/g-768-2.jpg"
+                    />
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="img/gallery/g-576-2.jpg"
+                    />
+                    <img
+                      class="gallery__image"
+                      src="img/gal2.jpg"
+                      alt="Gallery"
+                    />
+                  </picture>
                 </div>
                 <div class="swiper-slide">
-                  <div class="gallery__image" tabindex="0" style="background-image: url(img/gal3.jpg)"></div>
+                  <picture>
+                    <source media="(min-width: 1025px)" srcset="img/gal3.jpg" />
+                    <source
+                      media="(min-width: 769px)"
+                      srcset="img/gallery/g-1024-3.jpg"
+                    />
+                    <source
+                      media="(min-width: 577px)"
+                      srcset="img/gallery/g-768-3.jpg"
+                    />
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="img/gallery/g-576-3.jpg"
+                    />
+                    <img
+                      class="gallery__image"
+                      src="img/gal3.jpg"
+                      alt="Gallery"
+                    />
+                  </picture>
                 </div>
                 <div class="swiper-slide">
-                  <div class="gallery__image" tabindex="0" style="background-image: url(img/gal4.jpg)"></div>
+                  <picture>
+                    <source media="(min-width: 1025px)" srcset="img/gal4.jpg" />
+                    <source
+                      media="(min-width: 769px)"
+                      srcset="img/gallery/g-1024-4.jpg"
+                    />
+                    <source
+                      media="(min-width: 577px)"
+                      srcset="img/gallery/g-768-4.jpg"
+                    />
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="img/gallery/g-576-4.jpg"
+                    />
+                    <img
+                      class="gallery__image"
+                      src="img/gal4.jpg"
+                      alt="Gallery"
+                    />
+                  </picture>
                 </div>
                 <div class="swiper-slide">
-                  <div class="gallery__image" tabindex="0" style="background-image: url(img/gal5.jpg)"></div>
+                  <picture>
+                    <source media="(min-width: 1025px)" srcset="img/gal5.jpg" />
+                    <source
+                      media="(min-width: 769px)"
+                      srcset="img/gallery/g-1024-5.jpg"
+                    />
+                    <source
+                      media="(min-width: 577px)"
+                      srcset="img/gallery/g-768-5.jpg"
+                    />
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="img/gallery/g-576-5.jpg"
+                    />
+                    <img
+                      class="gallery__image"
+                      src="img/gal5.jpg"
+                      alt="Gallery"
+                    />
+                  </picture>
                 </div>
                 <div class="swiper-slide">
-                  <div class="gallery__image" tabindex="0" style="background-image: url(img/gal6.jpg)"></div>
+                  <picture>
+                    <source media="(min-width: 1025px)" srcset="img/gal6.jpg" />
+                    <source
+                      media="(min-width: 769px)"
+                      srcset="img/gallery/g-1024-6.jpg"
+                    />
+                    <source
+                      media="(min-width: 577px)"
+                      srcset="img/gallery/g-768-6.jpg"
+                    />
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="img/gallery/g-576-6.jpg"
+                    />
+                    <img
+                      class="gallery__image"
+                      src="img/gal6.jpg"
+                      alt="Gallery"
+                    />
+                  </picture>
                 </div>
               </div>
             </div>
@@ -942,84 +1062,30 @@
                     <div class="item__arrow"></div>
                   </div>
                   <div class="accordion__panel">
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="1">
-                        Бенедетто ди Биндо
-                      </span>
-                      <span class="accordion__item" data-id="2"
-                        >Бергоньоне, Амброджо</span
-                      >
-                      <span class="accordion__item" data-id="3">
-                        Биссоло, Франческо
-                      </span>
-                      <span class="accordion__item" data-id="4"
-                        >Больтраффио, Джованни</span
-                      >
-                      <span class="accordion__item" data-id="5"
-                        >Бонсиньори, Франческо</span
-                      >
-                      <span class="accordion__item" data-id="6">
-                        Боттичини, Рафаэлло
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Брамантино
-                      </span>
-                      <span class="accordion__item" data-id="1">
-                        Бреа, Людовико
-                      </span>
-                      <span class="accordion__item" data-id="2"
-                        >Бьяджо д’Антонио Туччи</span
-                      >
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="3">
-                        Веккьетта
-                      </span>
-                      <span class="accordion__item" data-id="4">
-                        Андреа Верроккьо
-                      </span>
-                      <span class="accordion__item" data-id="5">
-                        Доменико Гирландайо
-                      </span>
-                      <span class="accordion__item" data-id="6">
-                        Беноццо Гоццоли
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Граначчи, Франческо
-                      </span>
-                      <span class="accordion__item" data-id="1">
-                        Грегорио ди Чекко
-                      </span>
-                      <span class="accordion__item" data-id="2">
-                        Джованни да Удине
-                      </span>
-                      <span class="accordion__item" data-id="3">
-                        Джованни ди Паоло
-                      </span>
-                      <span class="accordion__item" data-id="4">
-                        Джорджоне
-                      </span>
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="5">
-                        Парентино, Бернардо
-                      </span>
-                      <span class="accordion__item" data-id="6">
-                        Пезеллино
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Пьетро Перуджино
-                      </span>
-                      <span class="accordion__item" data-id="1"
-                        >Перуцци, Бальдассаре</span
-                      >
-                      <span class="accordion__item" data-id="2">
-                        Пизанелло
-                      </span>
-                      <span class="accordion__item" data-id="3">
-                        Пинтуриккьо
-                      </span>
-                    </div>
+                    <span class="accordion__item" data-id="1">Бенедетто ди Биндо</span>
+                    <span class="accordion__item" data-id="2">Бергоньоне, Амброджо</span>
+                    <span class="accordion__item" data-id="3">Биссоло, Франческо</span>
+                    <span class="accordion__item" data-id="4">Больтраффио, Джованни</span>
+                    <span class="accordion__item" data-id="5">Бонсиньори, Франческо</span>
+                    <span class="accordion__item" data-id="6">Боттичини, Рафаэлло</span>
+                    <span class="accordion__item" data-id="7">Брамантино</span>
+                    <span class="accordion__item" data-id="1">Бреа, Людовико</span>
+                    <span class="accordion__item" data-id="2">Бьяджо д’Антонио Туччи</span>
+                    <span class="accordion__item" data-id="3">Веккьетта </span>
+                    <span class="accordion__item" data-id="4">Андреа Верроккьо</span>
+                    <span class="accordion__item" data-id="5">Доменико Гирландайо</span>
+                    <span class="accordion__item" data-id="6">Беноццо Гоццоли</span>
+                    <span class="accordion__item" data-id="7">Граначчи, Франческо</span>
+                    <span class="accordion__item" data-id="1">Грегорио ди Чекко</span>
+                    <span class="accordion__item" data-id="2">Джованни да Удине</span>
+                    <span class="accordion__item" data-id="3">Джованни ди Паоло</span>
+                    <span class="accordion__item" data-id="4">Джорджоне</span>
+                    <span class="accordion__item" data-id="5">Парентино, Бернардо</span>
+                    <span class="accordion__item" data-id="6">Пезеллино</span>
+                    <span class="accordion__item" data-id="7">Пьетро Перуджино</span>
+                    <span class="accordion__item" data-id="1">Перуцци, Бальдассаре</span>
+                    <span class="accordion__item" data-id="2">Пизанелло</span>
+                    <span class="accordion__item" data-id="3">Пинтуриккьо</span>
                   </div>
                 </li>
                 <li class="catalog__list-item">
@@ -1028,51 +1094,30 @@
                     <div class="item__arrow"></div>
                   </div>
                   <div class="accordion__panel">
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="1">
-                        Бенедетто ди Биндо
-                      </span>
-                      <span class="accordion__item" data-id="2"
-                        >Бергоньоне, Амброджо</span
-                      >
-                      <span class="accordion__item" data-id="3">
-                        Биссоло, Франческо
-                      </span>
-                      <span class="accordion__item" data-id="2"
-                        >Бьяджо д’Антонио Туччи</span
-                      >
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="3">
-                        Веккьетта
-                      </span>
-                      <span class="accordion__item" data-id="4">
-                        Андреа Верроккьо
-                      </span>
-                      <span class="accordion__item" data-id="5">
-                        Доменико Гирландайо
-                      </span>
-                      <span class="accordion__item" data-id="6">
-                        Беноццо Гоццоли
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Граначчи, Франческо
-                      </span>
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="7">
-                        Пьетро Перуджино
-                      </span>
-                      <span class="accordion__item" data-id="1"
-                        >Перуцци, Бальдассаре</span
-                      >
-                      <span class="accordion__item" data-id="2">
-                        Пизанелло
-                      </span>
-                      <span class="accordion__item" data-id="3">
-                        Пинтуриккьо
-                      </span>
-                    </div>
+                    <span class="accordion__item" data-id="1">Бенедетто ди Биндо</span>
+                    <span class="accordion__item" data-id="2">Бергоньоне, Амброджо</span>
+                    <span class="accordion__item" data-id="3">Биссоло, Франческо</span>
+                    <span class="accordion__item" data-id="4">Больтраффио, Джованни</span>
+                    <span class="accordion__item" data-id="5">Бонсиньори, Франческо</span>
+                    <span class="accordion__item" data-id="6">Боттичини, Рафаэлло</span>
+                    <span class="accordion__item" data-id="7">Брамантино</span>
+                    <span class="accordion__item" data-id="1">Бреа, Людовико</span>
+                    <span class="accordion__item" data-id="2">Бьяджо д’Антонио Туччи</span>
+                    <span class="accordion__item" data-id="3">Веккьетта </span>
+                    <span class="accordion__item" data-id="4">Андреа Верроккьо</span>
+                    <span class="accordion__item" data-id="5">Доменико Гирландайо</span>
+                    <span class="accordion__item" data-id="6">Беноццо Гоццоли</span>
+                    <span class="accordion__item" data-id="7">Граначчи, Франческо</span>
+                    <span class="accordion__item" data-id="1">Грегорио ди Чекко</span>
+                    <span class="accordion__item" data-id="2">Джованни да Удине</span>
+                    <span class="accordion__item" data-id="3">Джованни ди Паоло</span>
+                    <span class="accordion__item" data-id="4">Джорджоне</span>
+                    <span class="accordion__item" data-id="5">Парентино, Бернардо</span>
+                    <span class="accordion__item" data-id="6">Пезеллино</span>
+                    <span class="accordion__item" data-id="7">Пьетро Перуджино</span>
+                    <span class="accordion__item" data-id="1">Перуцци, Бальдассаре</span>
+                    <span class="accordion__item" data-id="2">Пизанелло</span>
+                    <span class="accordion__item" data-id="3">Пинтуриккьо</span>
                   </div>
                 </li>
                 <li class="catalog__list-item">
@@ -1081,66 +1126,30 @@
                     <div class="item__arrow"></div>
                   </div>
                   <div class="accordion__panel">
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="1">
-                        Бенедетто ди Биндо
-                      </span>
-                      <span class="accordion__item" data-id="2"
-                        >Бергоньоне, Амброджо</span
-                      >
-                      <span class="accordion__item" data-id="3">
-                        Биссоло, Франческо
-                      </span>
-                      <span class="accordion__item" data-id="4"
-                        >Больтраффио, Джованни</span
-                      >
-                      <span class="accordion__item" data-id="5"
-                        >Бонсиньори, Франческо</span
-                      >
-                      <span class="accordion__item" data-id="6">
-                        Боттичини, Рафаэлло
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Брамантино
-                      </span>
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="3">
-                        Веккьетта
-                      </span>
-                      <span class="accordion__item" data-id="4">
-                        Андреа Верроккьо
-                      </span>
-                      <span class="accordion__item" data-id="5">
-                        Доменико Гирландайо
-                      </span>
-                      <span class="accordion__item" data-id="6">
-                        Беноццо Гоццоли
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Граначчи, Франческо
-                      </span>
-                      <span class="accordion__item" data-id="1">
-                        Грегорио ди Чекко
-                      </span>
-                      <span class="accordion__item" data-id="2">
-                        Джованни да Удине
-                      </span>
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="5">
-                        Парентино, Бернардо
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Пьетро Перуджино
-                      </span>
-                      <span class="accordion__item" data-id="2">
-                        Пизанелло
-                      </span>
-                      <span class="accordion__item" data-id="3">
-                        Пинтуриккьо
-                      </span>
-                    </div>
+                    <span class="accordion__item" data-id="1">Бенедетто ди Биндо</span>
+                    <span class="accordion__item" data-id="2">Бергоньоне, Амброджо</span>
+                    <span class="accordion__item" data-id="3">Биссоло, Франческо</span>
+                    <span class="accordion__item" data-id="4">Больтраффио, Джованни</span>
+                    <span class="accordion__item" data-id="5">Бонсиньори, Франческо</span>
+                    <span class="accordion__item" data-id="6">Боттичини, Рафаэлло</span>
+                    <span class="accordion__item" data-id="7">Брамантино</span>
+                    <span class="accordion__item" data-id="1">Бреа, Людовико</span>
+                    <span class="accordion__item" data-id="2">Бьяджо д’Антонио Туччи</span>
+                    <span class="accordion__item" data-id="3">Веккьетта </span>
+                    <span class="accordion__item" data-id="4">Андреа Верроккьо</span>
+                    <span class="accordion__item" data-id="5">Доменико Гирландайо</span>
+                    <span class="accordion__item" data-id="6">Беноццо Гоццоли</span>
+                    <span class="accordion__item" data-id="7">Граначчи, Франческо</span>
+                    <span class="accordion__item" data-id="1">Грегорио ди Чекко</span>
+                    <span class="accordion__item" data-id="2">Джованни да Удине</span>
+                    <span class="accordion__item" data-id="3">Джованни ди Паоло</span>
+                    <span class="accordion__item" data-id="4">Джорджоне</span>
+                    <span class="accordion__item" data-id="5">Парентино, Бернардо</span>
+                    <span class="accordion__item" data-id="6">Пезеллино</span>
+                    <span class="accordion__item" data-id="7">Пьетро Перуджино</span>
+                    <span class="accordion__item" data-id="1">Перуцци, Бальдассаре</span>
+                    <span class="accordion__item" data-id="2">Пизанелло</span>
+                    <span class="accordion__item" data-id="3">Пинтуриккьо</span>
                   </div>
                 </li>
                 <li class="catalog__list-item">
@@ -1149,84 +1158,30 @@
                     <div class="item__arrow"></div>
                   </div>
                   <div class="accordion__panel">
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="1">
-                        Бенедетто ди Биндо
-                      </span>
-                      <span class="accordion__item" data-id="2"
-                        >Бергоньоне, Амброджо</span
-                      >
-                      <span class="accordion__item" data-id="3">
-                        Биссоло, Франческо
-                      </span>
-                      <span class="accordion__item" data-id="4"
-                        >Больтраффио, Джованни</span
-                      >
-                      <span class="accordion__item" data-id="5"
-                        >Бонсиньори, Франческо</span
-                      >
-                      <span class="accordion__item" data-id="6">
-                        Боттичини, Рафаэлло
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Брамантино
-                      </span>
-                      <span class="accordion__item" data-id="1">
-                        Бреа, Людовико
-                      </span>
-                      <span class="accordion__item" data-id="2"
-                        >Бьяджо д’Антонио Туччи</span
-                      >
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="3">
-                        Веккьетта
-                      </span>
-                      <span class="accordion__item" data-id="4">
-                        Андреа Верроккьо
-                      </span>
-                      <span class="accordion__item" data-id="5">
-                        Доменико Гирландайо
-                      </span>
-                      <span class="accordion__item" data-id="6">
-                        Беноццо Гоццоли
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Граначчи, Франческо
-                      </span>
-                      <span class="accordion__item" data-id="1">
-                        Грегорио ди Чекко
-                      </span>
-                      <span class="accordion__item" data-id="2">
-                        Джованни да Удине
-                      </span>
-                      <span class="accordion__item" data-id="3">
-                        Джованни ди Паоло
-                      </span>
-                      <span class="accordion__item" data-id="4">
-                        Джорджоне
-                      </span>
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="5">
-                        Парентино, Бернардо
-                      </span>
-                      <span class="accordion__item" data-id="6">
-                        Пезеллино
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Пьетро Перуджино
-                      </span>
-                      <span class="accordion__item" data-id="1"
-                        >Перуцци, Бальдассаре</span
-                      >
-                      <span class="accordion__item" data-id="2">
-                        Пизанелло
-                      </span>
-                      <span class="accordion__item" data-id="3">
-                        Пинтуриккьо
-                      </span>
-                    </div>
+                    <span class="accordion__item" data-id="1">Бенедетто ди Биндо</span>
+                    <span class="accordion__item" data-id="2">Бергоньоне, Амброджо</span>
+                    <span class="accordion__item" data-id="3">Биссоло, Франческо</span>
+                    <span class="accordion__item" data-id="4">Больтраффио, Джованни</span>
+                    <span class="accordion__item" data-id="5">Бонсиньори, Франческо</span>
+                    <span class="accordion__item" data-id="6">Боттичини, Рафаэлло</span>
+                    <span class="accordion__item" data-id="7">Брамантино</span>
+                    <span class="accordion__item" data-id="1">Бреа, Людовико</span>
+                    <span class="accordion__item" data-id="2">Бьяджо д’Антонио Туччи</span>
+                    <span class="accordion__item" data-id="3">Веккьетта </span>
+                    <span class="accordion__item" data-id="4">Андреа Верроккьо</span>
+                    <span class="accordion__item" data-id="5">Доменико Гирландайо</span>
+                    <span class="accordion__item" data-id="6">Беноццо Гоццоли</span>
+                    <span class="accordion__item" data-id="7">Граначчи, Франческо</span>
+                    <span class="accordion__item" data-id="1">Грегорио ди Чекко</span>
+                    <span class="accordion__item" data-id="2">Джованни да Удине</span>
+                    <span class="accordion__item" data-id="3">Джованни ди Паоло</span>
+                    <span class="accordion__item" data-id="4">Джорджоне</span>
+                    <span class="accordion__item" data-id="5">Парентино, Бернардо</span>
+                    <span class="accordion__item" data-id="6">Пезеллино</span>
+                    <span class="accordion__item" data-id="7">Пьетро Перуджино</span>
+                    <span class="accordion__item" data-id="1">Перуцци, Бальдассаре</span>
+                    <span class="accordion__item" data-id="2">Пизанелло</span>
+                    <span class="accordion__item" data-id="3">Пинтуриккьо</span>
                   </div>
                 </li>
                 <li class="catalog__list-item">
@@ -1235,51 +1190,30 @@
                     <div class="item__arrow"></div>
                   </div>
                   <div class="accordion__panel">
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="1">
-                        Бенедетто ди Биндо
-                      </span>
-                      <span class="accordion__item" data-id="2"
-                        >Бергоньоне, Амброджо</span
-                      >
-                      <span class="accordion__item" data-id="3">
-                        Биссоло, Франческо
-                      </span>
-                      <span class="accordion__item" data-id="4"
-                        >Больтраффио, Джованни</span
-                      >
-                      <span class="accordion__item" data-id="5"
-                        >Бонсиньори, Франческо</span
-                      >
-                      <span class="accordion__item" data-id="6">
-                        Боттичини, Рафаэлло
-                      </span>
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="3">
-                        Веккьетта
-                      </span>
-                      <span class="accordion__item" data-id="4">
-                        Андреа Верроккьо
-                      </span>
-                      <span class="accordion__item" data-id="5">
-                        Доменико Гирландайо
-                      </span>
-                      <span class="accordion__item" data-id="6">
-                        Беноццо Гоццоли
-                      </span>
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="5">
-                        Парентино, Бернардо
-                      </span>
-                      <span class="accordion__item" data-id="6">
-                        Пезеллино
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Пьетро Перуджино
-                      </span>
-                    </div>
+                    <span class="accordion__item" data-id="1">Бенедетто ди Биндо</span>
+                    <span class="accordion__item" data-id="2">Бергоньоне, Амброджо</span>
+                    <span class="accordion__item" data-id="3">Биссоло, Франческо</span>
+                    <span class="accordion__item" data-id="4">Больтраффио, Джованни</span>
+                    <span class="accordion__item" data-id="5">Бонсиньори, Франческо</span>
+                    <span class="accordion__item" data-id="6">Боттичини, Рафаэлло</span>
+                    <span class="accordion__item" data-id="7">Брамантино</span>
+                    <span class="accordion__item" data-id="1">Бреа, Людовико</span>
+                    <span class="accordion__item" data-id="2">Бьяджо д’Антонио Туччи</span>
+                    <span class="accordion__item" data-id="3">Веккьетта </span>
+                    <span class="accordion__item" data-id="4">Андреа Верроккьо</span>
+                    <span class="accordion__item" data-id="5">Доменико Гирландайо</span>
+                    <span class="accordion__item" data-id="6">Беноццо Гоццоли</span>
+                    <span class="accordion__item" data-id="7">Граначчи, Франческо</span>
+                    <span class="accordion__item" data-id="1">Грегорио ди Чекко</span>
+                    <span class="accordion__item" data-id="2">Джованни да Удине</span>
+                    <span class="accordion__item" data-id="3">Джованни ди Паоло</span>
+                    <span class="accordion__item" data-id="4">Джорджоне</span>
+                    <span class="accordion__item" data-id="5">Парентино, Бернардо</span>
+                    <span class="accordion__item" data-id="6">Пезеллино</span>
+                    <span class="accordion__item" data-id="7">Пьетро Перуджино</span>
+                    <span class="accordion__item" data-id="1">Перуцци, Бальдассаре</span>
+                    <span class="accordion__item" data-id="2">Пизанелло</span>
+                    <span class="accordion__item" data-id="3">Пинтуриккьо</span>
                   </div>
                 </li>
                 <li class="catalog__list-item">
@@ -1288,75 +1222,30 @@
                     <div class="item__arrow"></div>
                   </div>
                   <div class="accordion__panel">
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="1">
-                        Бенедетто ди Биндо
-                      </span>
-                      <span class="accordion__item" data-id="2"
-                        >Бергоньоне, Амброджо</span
-                      >
-                      <span class="accordion__item" data-id="3">
-                        Биссоло, Франческо
-                      </span>
-                      <span class="accordion__item" data-id="4"
-                        >Больтраффио, Джованни</span
-                      >
-                      <span class="accordion__item" data-id="5"
-                        >Бонсиньори, Франческо</span
-                      >
-                      <span class="accordion__item" data-id="6">
-                        Боттичини, Рафаэлло
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Брамантино
-                      </span>
-                      <span class="accordion__item" data-id="1">
-                        Бреа, Людовико
-                      </span>
-                      <span class="accordion__item" data-id="2"
-                        >Бьяджо д’Антонио Туччи</span
-                      >
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="3">
-                        Веккьетта
-                      </span>
-                      <span class="accordion__item" data-id="4">
-                        Андреа Верроккьо
-                      </span>
-                      <span class="accordion__item" data-id="5">
-                        Доменико Гирландайо
-                      </span>
-                      <span class="accordion__item" data-id="6">
-                        Беноццо Гоццоли
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Граначчи, Франческо
-                      </span>
-                      <span class="accordion__item" data-id="1">
-                        Грегорио ди Чекко
-                      </span>
-                      <span class="accordion__item" data-id="2">
-                        Джованни да Удине
-                      </span>
-                      <span class="accordion__item" data-id="3">
-                        Джованни ди Паоло
-                      </span>
-                      <span class="accordion__item" data-id="4">
-                        Джорджоне
-                      </span>
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="5">
-                        Парентино, Бернардо
-                      </span>
-                      <span class="accordion__item" data-id="6">
-                        Пезеллино
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Пьетро Перуджино
-                      </span>
-                    </div>
+                    <span class="accordion__item" data-id="1">Бенедетто ди Биндо</span>
+                    <span class="accordion__item" data-id="2">Бергоньоне, Амброджо</span>
+                    <span class="accordion__item" data-id="3">Биссоло, Франческо</span>
+                    <span class="accordion__item" data-id="4">Больтраффио, Джованни</span>
+                    <span class="accordion__item" data-id="5">Бонсиньори, Франческо</span>
+                    <span class="accordion__item" data-id="6">Боттичини, Рафаэлло</span>
+                    <span class="accordion__item" data-id="7">Брамантино</span>
+                    <span class="accordion__item" data-id="1">Бреа, Людовико</span>
+                    <span class="accordion__item" data-id="2">Бьяджо д’Антонио Туччи</span>
+                    <span class="accordion__item" data-id="3">Веккьетта </span>
+                    <span class="accordion__item" data-id="4">Андреа Верроккьо</span>
+                    <span class="accordion__item" data-id="5">Доменико Гирландайо</span>
+                    <span class="accordion__item" data-id="6">Беноццо Гоццоли</span>
+                    <span class="accordion__item" data-id="7">Граначчи, Франческо</span>
+                    <span class="accordion__item" data-id="1">Грегорио ди Чекко</span>
+                    <span class="accordion__item" data-id="2">Джованни да Удине</span>
+                    <span class="accordion__item" data-id="3">Джованни ди Паоло</span>
+                    <span class="accordion__item" data-id="4">Джорджоне</span>
+                    <span class="accordion__item" data-id="5">Парентино, Бернардо</span>
+                    <span class="accordion__item" data-id="6">Пезеллино</span>
+                    <span class="accordion__item" data-id="7">Пьетро Перуджино</span>
+                    <span class="accordion__item" data-id="1">Перуцци, Бальдассаре</span>
+                    <span class="accordion__item" data-id="2">Пизанелло</span>
+                    <span class="accordion__item" data-id="3">Пинтуриккьо</span>
                   </div>
                 </li>
                 <li class="catalog__list-item">
@@ -1365,69 +1254,30 @@
                     <div class="item__arrow"></div>
                   </div>
                   <div class="accordion__panel">
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="1">
-                        Бенедетто ди Биндо
-                      </span>
-                      <span class="accordion__item" data-id="2"
-                        >Бергоньоне, Амброджо</span
-                      >
-                      <span class="accordion__item" data-id="3">
-                        Биссоло, Франческо
-                      </span>
-                      <span class="accordion__item" data-id="4"
-                        >Больтраффио, Джованни</span
-                      >
-                      <span class="accordion__item" data-id="5"
-                        >Бонсиньори, Франческо</span
-                      >
-                      <span class="accordion__item" data-id="7">
-                        Брамантино
-                      </span>
-                      <span class="accordion__item" data-id="1">
-                        Бреа, Людовико
-                      </span>
-                      <span class="accordion__item" data-id="2"
-                        >Бьяджо д’Антонио Туччи</span
-                      >
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="3">
-                        Веккьетта
-                      </span>
-                      <span class="accordion__item" data-id="4">
-                        Андреа Верроккьо
-                      </span>
-                      <span class="accordion__item" data-id="5">
-                        Доменико Гирландайо
-                      </span>
-                      <span class="accordion__item" data-id="6">
-                        Беноццо Гоццоли
-                      </span>
-                      <span class="accordion__item" data-id="1">
-                        Грегорио ди Чекко
-                      </span>
-                      <span class="accordion__item" data-id="2">
-                        Джованни да Удине
-                      </span>
-                      <span class="accordion__item" data-id="4">
-                        Джорджоне
-                      </span>
-                    </div>
-                    <div class="accordion__content">
-                      <span class="accordion__item" data-id="5">
-                        Парентино, Бернардо
-                      </span>
-                      <span class="accordion__item" data-id="6">
-                        Пезеллино
-                      </span>
-                      <span class="accordion__item" data-id="7">
-                        Пьетро Перуджино
-                      </span>
-                      <span class="accordion__item" data-id="1"
-                        >Перуцци, Бальдассаре</span
-                      >
-                    </div>
+                    <span class="accordion__item" data-id="1">Бенедетто ди Биндо</span>
+                    <span class="accordion__item" data-id="2">Бергоньоне, Амброджо</span>
+                    <span class="accordion__item" data-id="3">Биссоло, Франческо</span>
+                    <span class="accordion__item" data-id="4">Больтраффио, Джованни</span>
+                    <span class="accordion__item" data-id="5">Бонсиньори, Франческо</span>
+                    <span class="accordion__item" data-id="6">Боттичини, Рафаэлло</span>
+                    <span class="accordion__item" data-id="7">Брамантино</span>
+                    <span class="accordion__item" data-id="1">Бреа, Людовико</span>
+                    <span class="accordion__item" data-id="2">Бьяджо д’Антонио Туччи</span>
+                    <span class="accordion__item" data-id="3">Веккьетта </span>
+                    <span class="accordion__item" data-id="4">Андреа Верроккьо</span>
+                    <span class="accordion__item" data-id="5">Доменико Гирландайо</span>
+                    <span class="accordion__item" data-id="6">Беноццо Гоццоли</span>
+                    <span class="accordion__item" data-id="7">Граначчи, Франческо</span>
+                    <span class="accordion__item" data-id="1">Грегорио ди Чекко</span>
+                    <span class="accordion__item" data-id="2">Джованни да Удине</span>
+                    <span class="accordion__item" data-id="3">Джованни ди Паоло</span>
+                    <span class="accordion__item" data-id="4">Джорджоне</span>
+                    <span class="accordion__item" data-id="5">Парентино, Бернардо</span>
+                    <span class="accordion__item" data-id="6">Пезеллино</span>
+                    <span class="accordion__item" data-id="7">Пьетро Перуджино</span>
+                    <span class="accordion__item" data-id="1">Перуцци, Бальдассаре</span>
+                    <span class="accordion__item" data-id="2">Пизанелло</span>
+                    <span class="accordion__item" data-id="3">Пинтуриккьо</span>
                   </div>
                 </li>
               </ul>
@@ -1440,7 +1290,6 @@
         <div class="container">
           <h2 class="actions__title section__title">События</h2>
           <div class="action__container">
-
             <div class="swiper__actions">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -1461,9 +1310,9 @@
                             Книжная гравюра в живом восприятии
                           </h3>
                           <p class="article__preview-descr text1">
-                            Один из ведущих флорентийских художников Кватроченто,
-                            основатель художественной династии, которую продолжили
-                            его брат Давид и сын Ридольфо.
+                            Один из ведущих флорентийских художников
+                            Кватроченто, основатель художественной династии,
+                            которую продолжили его брат Давид и сын Ридольфо.
                           </p>
                         </div>
                         <a class="article__link text1" href="#">Подробнее</a>
@@ -1485,7 +1334,7 @@
                             ММОМА 24&nbsp;марта&nbsp;19:00
                           </span>
                           <h3 class="article__preview-title">
-                            «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+                            «Открытая дискуссия». Дмитрий&nbsp;Петров и&nbsp;Сергей Ильин.
                           </h3>
                           <p class="article__preview-descr text1">
                             Высокий уровень вовлечения представителей целевой
@@ -1517,8 +1366,8 @@
                           </h3>
                           <p class="article__preview-descr text1">
                             Идейные соображения высшего порядка, а также
-                            современная методология разработки играет важную роль
-                            в формировании глубокомысленных рассуждений.
+                            современная методология разработки играет важную
+                            роль в формировании глубокомысленных рассуждений.
                           </p>
                         </div>
                         <a class="article__link text1" href="#">Подробнее</a>
@@ -1543,9 +1392,9 @@
                             Джон Винзор. Фотографии из серии «Метафора серебра»
                           </h3>
                           <p class="article__preview-descr text1">
-                            Один из ведущих флорентийских художников Кватроченто,
-                            основатель художественной династии, которую продолжили
-                            его брат Давид и сын Ридольфо.
+                            Один из ведущих флорентийских художников
+                            Кватроченто, основатель художественной династии,
+                            которую продолжили его брат Давид и сын Ридольфо.
                           </p>
                         </div>
                         <a class="article__link text1" href="#">Подробнее</a>
@@ -1582,8 +1431,13 @@
                 </div>
               </div>
             </div>
-            <button class="button articles__btn navigation__button btn__prev"></button>
-            <button class="button articles__btn navigation__button btn__next"></button>
+            <button
+              class="button articles__btn navigation__button btn__prev"
+            ></button>
+            <button
+              class="button articles__btn navigation__button btn__next"
+            ></button>
+            <div class="actions__swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -1594,122 +1448,121 @@
             <h2 class="section__title projects__title">Проекты</h2>
             <div class="projects__top-text">
               <p class="text projects__text">
-                Предварительные выводы: постоянное информационно-пропагандистское
-                обеспечение нашей деятельности однозначно фиксирует необходимость
-                своевременного выполнения сверхзадачи. А ещё независимые
-                государства смешаны с не уникальными данными до степени
-                совершенной неузнаваемости, из-за чего возрастает их статус
-                бесполезности. Прежде всего, постоянное
-                информационно-пропагандистское
+                Предварительные выводы: постоянное
+                информационно-пропагандистское обеспечение нашей деятельности
+                однозначно фиксирует необходимость своевременного выполнения
+                сверхзадачи. А ещё независимые государства смешаны с не
+                уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего,
+                постоянное информационно-пропагандистское
               </p>
-                <span class="tooltip">
-                  <span class="tooltip__marker" tabindex="0">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewbox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      >
-                      <path
-                        d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
-                        stroke="#9D5CD0"
-                      />
-                      <path
-                        d="M7.26154 6.72268H8.73846V13.2676H7.26154V6.72268ZM8 5.17017C7.71282 5.17017 7.4718 5.07884 7.27692 4.89619C7.09231 4.71354 7 4.49031 7 4.22648C7 3.96266 7.09231 3.73942 7.27692 3.55677C7.4718 3.36398 7.71282 3.26758 8 3.26758C8.28718 3.26758 8.52308 3.3589 8.70769 3.54155C8.90256 3.71405 9 3.93221 9 4.19604C9 4.47001 8.90256 4.7034 8.70769 4.89619C8.52308 5.07884 8.28718 5.17017 8 5.17017Z"
-                        fill="#000"
-                      />
-                    </svg>
-                  </span>
-                  <span class="tooltip__popup">
-                    Приятно, граждане, наблюдать, как сделанные на базе аналитики
-                    выводы вызывают у вас эмоции
-                    <img
-                      class="tooltip__image"
-                      src="img/triangle.svg"
-                      width="14px"
-                      height="9px"
+              <span class="tooltip">
+                <span class="tooltip__marker" tabindex="0">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewbox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
+                      stroke="#9D5CD0"
                     />
-                  </span>
-                </span>
-                <p class="text projects__text">
-                  обеспечение нашей деятельности однозначно фиксирует необходимость
-                экономической целесообразности принимаемых решений. И нет
-                сомнений, что действия представителей оппозиции могут быть
-                рассмотрены
-                </p>
-                <span class="tooltip">
-                  <span class="tooltip__marker" tabindex="0">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewbox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
-                        stroke="#9D5CD0"
-                      />
-                      <path
-                        d="M7.26154 6.72268H8.73846V13.2676H7.26154V6.72268ZM8 5.17017C7.71282 5.17017 7.4718 5.07884 7.27692 4.89619C7.09231 4.71354 7 4.49031 7 4.22648C7 3.96266 7.09231 3.73942 7.27692 3.55677C7.4718 3.36398 7.71282 3.26758 8 3.26758C8.28718 3.26758 8.52308 3.3589 8.70769 3.54155C8.90256 3.71405 9 3.93221 9 4.19604C9 4.47001 8.90256 4.7034 8.70769 4.89619C8.52308 5.07884 8.28718 5.17017 8 5.17017Z"
-                        fill="#000"
-                      />
-                    </svg>
-                  </span>
-                  <span class="tooltip__popup">
-                    Приятно, граждане, наблюдать, как сделанные на базе аналитики
-                    выводы вызывают у вас эмоции
-                    <img
-                      class="tooltip__image"
-                      src="img/triangle.svg"
-                      width="14px"
-                      height="9px"
+                    <path
+                      d="M7.26154 6.72268H8.73846V13.2676H7.26154V6.72268ZM8 5.17017C7.71282 5.17017 7.4718 5.07884 7.27692 4.89619C7.09231 4.71354 7 4.49031 7 4.22648C7 3.96266 7.09231 3.73942 7.27692 3.55677C7.4718 3.36398 7.71282 3.26758 8 3.26758C8.28718 3.26758 8.52308 3.3589 8.70769 3.54155C8.90256 3.71405 9 3.93221 9 4.19604C9 4.47001 8.90256 4.7034 8.70769 4.89619C8.52308 5.07884 8.28718 5.17017 8 5.17017Z"
+                      fill="#000"
                     />
-                  </span>
+                  </svg>
                 </span>
-                <p class="text projects__text">
-                  исключительно в разрезе маркетинговых и финансовых
-                </p>
-                <span class="tooltip">
-                  <span class="tooltip__marker" tabindex="0">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewbox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
-                        stroke="#9D5CD0"
-                      />
-                      <path
-                        d="M7.26154 6.72268H8.73846V13.2676H7.26154V6.72268ZM8 5.17017C7.71282 5.17017 7.4718 5.07884 7.27692 4.89619C7.09231 4.71354 7 4.49031 7 4.22648C7 3.96266 7.09231 3.73942 7.27692 3.55677C7.4718 3.36398 7.71282 3.26758 8 3.26758C8.28718 3.26758 8.52308 3.3589 8.70769 3.54155C8.90256 3.71405 9 3.93221 9 4.19604C9 4.47001 8.90256 4.7034 8.70769 4.89619C8.52308 5.07884 8.28718 5.17017 8 5.17017Z"
-                        fill="#000"
-                      />
-                    </svg>
-                  </span>
-                  <span class="tooltip__popup">
-                    В стремлении повысить качество
-                    <img
-                      class="tooltip__image"
-                      src="img/triangle.svg"
-                      width="14px"
-                      height="9px"
+                <span class="tooltip__popup">
+                  Приятно, граждане, наблюдать, как сделанные на базе аналитики
+                  выводы вызывают у вас эмоции
+                  <img
+                    class="tooltip__image"
+                    src="img/triangle.svg"
+                    width="14px"
+                    height="9px"
+                  />
+                </span>
+              </span>
+              <p class="text projects__text">
+                обеспечение нашей деятельности однозначно фиксирует
+                необходимость экономической целесообразности принимаемых
+                решений. И нет сомнений, что действия представителей оппозиции
+                могут быть рассмотрены
+              </p>
+              <span class="tooltip">
+                <span class="tooltip__marker" tabindex="0">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewbox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
+                      stroke="#9D5CD0"
                     />
-                  </span>
+                    <path
+                      d="M7.26154 6.72268H8.73846V13.2676H7.26154V6.72268ZM8 5.17017C7.71282 5.17017 7.4718 5.07884 7.27692 4.89619C7.09231 4.71354 7 4.49031 7 4.22648C7 3.96266 7.09231 3.73942 7.27692 3.55677C7.4718 3.36398 7.71282 3.26758 8 3.26758C8.28718 3.26758 8.52308 3.3589 8.70769 3.54155C8.90256 3.71405 9 3.93221 9 4.19604C9 4.47001 8.90256 4.7034 8.70769 4.89619C8.52308 5.07884 8.28718 5.17017 8 5.17017Z"
+                      fill="#000"
+                    />
+                  </svg>
                 </span>
-                <p class="text projects__text">
-                  предпосылок. Банальные, но неопровержимые выводы, а также
+                <span class="tooltip__popup">
+                  Приятно, граждане, наблюдать, как сделанные на базе аналитики
+                  выводы вызывают у вас эмоции
+                  <img
+                    class="tooltip__image"
+                    src="img/triangle.svg"
+                    width="14px"
+                    height="9px"
+                  />
+                </span>
+              </span>
+              <p class="text projects__text">
+                исключительно в разрезе маркетинговых и&nbsp;финансовых
+              </p>
+              <span class="tooltip">
+                <span class="tooltip__marker" tabindex="0">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewbox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
+                      stroke="#9D5CD0"
+                    />
+                    <path
+                      d="M7.26154 6.72268H8.73846V13.2676H7.26154V6.72268ZM8 5.17017C7.71282 5.17017 7.4718 5.07884 7.27692 4.89619C7.09231 4.71354 7 4.49031 7 4.22648C7 3.96266 7.09231 3.73942 7.27692 3.55677C7.4718 3.36398 7.71282 3.26758 8 3.26758C8.28718 3.26758 8.52308 3.3589 8.70769 3.54155C8.90256 3.71405 9 3.93221 9 4.19604C9 4.47001 8.90256 4.7034 8.70769 4.89619C8.52308 5.07884 8.28718 5.17017 8 5.17017Z"
+                      fill="#000"
+                    />
+                  </svg>
+                </span>
+                <span class="tooltip__popup">
+                  В стремлении повысить качество
+                  <img
+                    class="tooltip__image"
+                    src="img/triangle.svg"
+                    width="14px"
+                    height="9px"
+                  />
+                </span>
+              </span>
+              <p class="text projects__text">
+                предпосылок. Банальные, но неопровержимые выводы, а также
                 представители современных социальных резервов призывают нас к
                 новым свершениям, которые, в свою очередь, должны быть смешаны
                 с не уникальными данными до степени совершенной неузнаваемости.
                 Подробнее:
-                </p>
-                <a href="#" class="projects__link text"
-                  >blanchard-art.ru/projects</a
-                >
+              </p>
+              <a href="#" class="projects__link text"
+                >blanchard-art.ru/projects</a
+              >
             </div>
           </div>
           <div class="projects__bottom">
@@ -1718,38 +1571,80 @@
               <div class="swiper-partners">
                 <div class="swiper-wrapper partners-s">
                   <div class="swiper-slide">
-                    <div class="partners__card" tabindex="0" style="background-image: url('img/part2.png')"></div>
+                    <div
+                      class="partners__card"
+                      tabindex="0"
+                      style="background-image: url('img/part2.png')"
+                    ></div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="partners__card" tabindex="0" style="background-image: url('img/part3.png')"></div>
+                    <div
+                      class="partners__card"
+                      tabindex="0"
+                      style="background-image: url('img/part3.png')"
+                    ></div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="partners__card" tabindex="0" style="background-image: url('img/part1.png')"></div>
+                    <div
+                      class="partners__card"
+                      tabindex="0"
+                      style="background-image: url('img/part1.png')"
+                    ></div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="partners__card" tabindex="0" style="background-image: url('img/part4.png')"></div>
+                    <div
+                      class="partners__card"
+                      tabindex="0"
+                      style="background-image: url('img/part4.png')"
+                    ></div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="partners__card" tabindex="0" style="background-image: url('img/part5.png')"></div>
+                    <div
+                      class="partners__card"
+                      tabindex="0"
+                      style="background-image: url('img/part5.png')"
+                    ></div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="partners__card" tabindex="0" style="background-image: url('img/part6.png')"></div>
+                    <div
+                      class="partners__card"
+                      tabindex="0"
+                      style="background-image: url('img/part6.png')"
+                    ></div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="partners__card" tabindex="0" style="background-image: url('img/part7.png')"></div>
+                    <div
+                      class="partners__card"
+                      tabindex="0"
+                      style="background-image: url('img/part7.png')"
+                    ></div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="partners__card" tabindex="0" style="background-image: url('img/part8.png')"></div>
+                    <div
+                      class="partners__card"
+                      tabindex="0"
+                      style="background-image: url('img/part8.png')"
+                    ></div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="partners__card" tabindex="0" style="background-image: url('img/part9.png')"></div>
+                    <div
+                      class="partners__card"
+                      tabindex="0"
+                      style="background-image: url('img/part9.png')"
+                    ></div>
                   </div>
                 </div>
                 <!-- If we need navigation buttons -->
               </div>
 
-              <button class="button projects__button navigation__button prev swiper-button-prev" id="projects-prev"></button>
-              <button class="button projects__button navigation__button next swiper-button-next" id="projects-next"></button>
+              <button
+                class="button projects__button navigation__button prev swiper-button-prev"
+                id="projects-prev"
+              ></button>
+              <button
+                class="button projects__button navigation__button next swiper-button-next"
+                id="projects-next"
+              ></button>
             </div>
           </div>
         </div>
@@ -1786,10 +1681,13 @@
                 <button class="button form__button" type="submit">
                   Заказать обратный звонок
                 </button>
+                <button class="button form__button f-320">
+                  Заказать
+                </button>
               </form>
             </div>
             <div class="contacts__right">
-              <span class="contacts__title"> Связаться в один клик </span>
+              <span class="contacts__title contacts__title-bottom"> Связаться в один клик </span>
               <ul class="list icon__list flex">
                 <li class="icon__item contacts__icon-item">
                   <a
@@ -1815,7 +1713,7 @@
         </div>
       </section>
       <div class="map">
-        <div id="map" style="width: 100%; height: 700px"></div>
+        <div id="map" style="width: 100%;"></div>
       </div>
     </main>
 
@@ -1833,7 +1731,7 @@
           <ul class="list icon__list flex">
             <li class="icon__item">
               <a
-                class="icon__link"
+                class="footer__icon-link icon__link"
                 aria-label="переход на страницу вконтакте"
                 href="#"
               >
@@ -1853,7 +1751,7 @@
             </li>
             <li class="icon__item">
               <a
-                class="icon__link"
+                class="footer__icon-link icon__link"
                 aria-label="переход на страницу инстаграм"
                 href="#"
               >
@@ -1881,7 +1779,7 @@
             </li>
             <li class="icon__item">
               <a
-                class="icon__link"
+                class="footer__icon-link icon__link"
                 aria-label="переход на страницу фэйсбук"
                 href="#"
               >
