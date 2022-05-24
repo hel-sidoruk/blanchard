@@ -560,6 +560,10 @@ h4 {
 
 /* hero */
 
+.hero .container {
+  height: 100%;
+}
+
 .swiper {
   position: absolute;
   left: 0;
@@ -567,18 +571,20 @@ h4 {
   height: 100%;
 }
 
-.swiper .swiper-slide {
-  background-repeat: no-repeat;
-  background-size: cover;
+.hero__image {
+  object-fit: cover;
+  height: 100%;
 }
 
 .hero__content {
   position: relative;
-  display: inline-block;
-  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
   height: 100%;
   width: 36%;
-  padding-top: 240px;
+  padding-top: 116px;
   z-index: 20;
 }
 
@@ -689,6 +695,7 @@ h4 {
 
 .gallery__right {
   padding-top: 23px;
+  width: 72%;
 }
 
 .gallery__top {
@@ -843,13 +850,12 @@ h4 {
 }
 
 .swiper__gallery {
-  width: 1150px;
-  height: 100%;
   overflow: hidden;
 }
 
-.swiper__gallery .swiper-wrapper {
-  height: calc(100% - 60px);
+.swiper__gallery .swiper-slide {
+  max-width: 350px;
+  max-height: 350px;
 }
 
 .swiper__top {
@@ -864,7 +870,6 @@ h4 {
 }
 
 .gallery__swiper-pagination {
-  margin: 0 11px;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
@@ -908,14 +913,16 @@ h4 {
 }
 
 .gallery__image {
-  /* width: 350px;
-  height: 350px; */
   object-fit: cover;
-  position: relative;
   flex-shrink: 0;
 }
 
-.gallery__image::after {
+.gallery__modal {
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery__modal::after {
   content: "";
   display: block;
   position: absolute;
@@ -929,11 +936,10 @@ h4 {
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0;
-  cursor: pointer;
   transition: opacity 0.5s;
 }
 
-.gallery__image::before {
+.gallery__modal::before {
   content: "";
   position: absolute;
   top: 0;
@@ -955,11 +961,11 @@ h4 {
   outline: 3px solid var(--color-purple);
 }
 
-.gallery__image:hover::after {
+.gallery__modal:hover::after {
   opacity: 1;
 }
 
-.gallery__image:active::before {
+.gallery__modal:active::before {
   opacity: 1;
 }
 
@@ -1252,6 +1258,14 @@ h4 {
   overflow: hidden;
 }
 
+.swiper__actions .swiper-wrapper {
+  min-height: 700px;
+}
+
+.swiper__actions .swiper-slide {
+  height: inherit;
+}
+
 .articles__item {
   max-width: 500px;
   min-height: 700px;
@@ -1274,7 +1288,7 @@ h4 {
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
-  height: 100%;
+  height: calc(100% - 300px);
   padding: 10px 50px 43px;
 }
 

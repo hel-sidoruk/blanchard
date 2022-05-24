@@ -93,10 +93,10 @@ const simple5 = new SimpleBar(document.getElementById("scrollbar5"), {
 const swiper = new Swiper(".swiper", {
   loop: true,
 
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 
   effect: "fade",
 
@@ -122,14 +122,10 @@ const swiperGallery = new Swiper(".swiper__gallery", {
     prevEl: ".gallery__swiper-button-prev",
   },
 
-  slidesPerView: 3,
-  spaceBetween: 50,
-  slidesPerGroup: 3,
-
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 0,
+      spaceBetween: 20,
       slidesPerGroup: 1,
     },
     577: {
@@ -142,6 +138,12 @@ const swiperGallery = new Swiper(".swiper__gallery", {
       slidesPerView: 2,
       spaceBetween: 34,
       slidesPerGroup: 2,
+    },
+
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
     },
   },
 });
@@ -162,13 +164,10 @@ const swiperActions = new Swiper(".swiper__actions", {
 
   speed: 600,
 
-  slidesPerView: 3,
-  spaceBetween: 50,
-
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 0
+      spaceBetween: 20,
     },
     577: {
       slidesPerView: 2,
@@ -177,6 +176,10 @@ const swiperActions = new Swiper(".swiper__actions", {
 
     769: {
       spaceBetween: 27,
+    },
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 50,
     },
   },
   a11y: {
@@ -196,9 +199,6 @@ const swiperPartners = new Swiper(".swiper-partners", {
 
   speed: 600,
 
-  slidesPerView: 3,
-  spaceBetween: 50,
-
   a11y: {
     paginationBulletMessage: "Слайд {{index}}",
   },
@@ -206,7 +206,7 @@ const swiperPartners = new Swiper(".swiper-partners", {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 0
+      spaceBetween: 20,
     },
     577: {
       slidesPerView: 2,
@@ -214,6 +214,10 @@ const swiperPartners = new Swiper(".swiper-partners", {
     },
     769: {
       slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1025: {
+      slidesPerView: 3,
       spaceBetween: 50,
     },
   },
