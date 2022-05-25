@@ -337,3 +337,44 @@ function init() {
 
   myMap.geoObjects.add(myPlacemark);
 }
+
+// search
+
+const searchIcon = document.querySelector('.search__icon')
+const searchContainer = document.querySelector('.search__container')
+const searchClose = document.querySelector('.search__close')
+const searchClose320 = document.getElementById('close320')
+
+searchIcon.addEventListener('click', ()=>{
+  addClassActive()
+})
+
+searchIcon.addEventListener('keypress', ()=>{
+  addClassActive()
+})
+
+searchClose.addEventListener('click', ()=>{
+  removeClassActive()
+})
+
+searchClose.addEventListener('keypress', ()=>{
+  removeClassActive()
+})
+
+searchClose320.addEventListener('click', ()=>{
+  removeClassActive()
+})
+
+searchClose320.addEventListener('keypress', ()=>{
+  removeClassActive()
+})
+
+function addClassActive(){
+  searchContainer.classList.add('search__container--active')
+  searchClose.setAttribute('tabindex', '0')
+}
+
+function removeClassActive(){
+  searchContainer.classList.remove('search__container--active')
+  searchClose.removeAttribute('tabindex')
+}
