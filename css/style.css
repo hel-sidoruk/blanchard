@@ -75,6 +75,7 @@ a {
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -301,7 +302,7 @@ h4 {
 
 .searchbar__top input {
   width: 73%;
-  transform: scale(0);
+  display: none;
   /* transition: transform .4s; */
   font-weight: 400;
   font-size: 16px;
@@ -311,11 +312,12 @@ h4 {
 
 .search__close {
   flex-shrink: 0;
-  transform: scale(0);
+  display: none;
   /* transition: transform .4s; */
   cursor: pointer;
   outline: none;
   font-size: 0;
+  position: relative;
 }
 
 .search__close::after {
@@ -349,11 +351,11 @@ h4 {
 }
 
 .search__container--active input {
-  transform: scale(1);
+  display: block;
 }
 
 .search__container--active .search__close {
-  transform: scale(1);
+  display: block;
 }
 
 /* header */
@@ -1375,40 +1377,37 @@ h4 {
 
 .swiper__actions {
   overflow: hidden;
-}
-
-.swiper__actions .swiper-wrapper {
   min-height: 700px;
 }
 
-.swiper__actions .swiper-slide {
-  height: inherit;
+.block__section {
+  display: flex;
+  min-height: 700px;
 }
 
 .articles__item {
-  max-width: 500px;
-  min-height: 700px;
-  display: flex;
   background-color: var(--color-white);
   border: 1px solid var(--color-silver);
+  min-height: 100%;
+  width: calc((100% - 100px) / 3);
   flex-shrink: 0;
 }
-/*
-.article__preview {
-  min-height: 100%;
-} */
 
-.article__preview-image {
-  min-height: 300px;
-  object-fit: cover;
+.articles__item.swiper-slide {
+  height: unset;
 }
 
-.article__preview-text {
+.block__content {
+  height: calc(100% - 355px);
+  display: flex;
+  padding: 10px 50px 43px;
   flex-direction: column;
   align-items: start;
-  justify-content: space-between;
-  height: calc(100% - 300px);
-  padding: 10px 50px 43px;
+}
+
+.article__preview-image {
+  height: 300px;
+  object-fit: cover;
 }
 
 .article__date {
@@ -1429,16 +1428,12 @@ h4 {
   margin-bottom: 8px;
 }
 
-.art-1 {
-  margin-bottom: 2px;
-}
-
 .article__preview-descr {
   color: var(--color-carbon);
-  margin-bottom: 16px;
 }
 
 .article__link {
+  margin-top: auto;
   line-height: 28px;
   color: var(--color-lavender);
   border-bottom: 1px solid var(--color-lavender);

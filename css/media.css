@@ -238,23 +238,14 @@
     margin-bottom: 22px;
   }
 
-  .articles__item {
-    height: 100%;
-  }
-
   .article__preview-image {
     min-height: 200px;
     max-height: 200px;
   }
 
-  .article__preview-text {
+  .block__content {
+    height: calc(100% - 254px);
     padding: 10px 33px 40px;
-    height: calc(100% - 200px);
-  }
-
-  .article__top {
-    display: flex;
-    flex-direction: column;
   }
 
   .article__date {
@@ -404,6 +395,7 @@
 
   .catalog__left {
     width: 100%;
+    margin-right: 0;
     min-height: 727px;
   }
 
@@ -417,7 +409,11 @@
 
   /* actions */
 
-  .article__preview-text {
+  .articles__item {
+    max-width: 313px;
+  }
+
+  .block__content {
     padding-right: 17px;
     padding-left: 36px;
   }
@@ -428,10 +424,10 @@
     margin-bottom: 5px;
   }
 
-  .article__top {
+  /* .article__top {
     display: flex;
     flex-direction: column;
-  }
+  } */
 
   .art-1 {
     margin-bottom: 4px;
@@ -520,7 +516,7 @@
     flex-direction: column;
     justify-content: space-between;
     transform: translateY(-150%);
-    transition: transform .7s ease-in-out;
+    transition: transform .5s ease-in-out;
   }
 
   .search__container--active + .search320 {
@@ -536,6 +532,10 @@
   .input320 {
     max-width: 180px;
     margin-left: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-white);
   }
 
   .search__icon320 svg {
@@ -546,6 +546,7 @@
   .search__close320 {
     align-self: flex-end;
     transform: unset;
+    display: block;
   }
 
   .search__close320 svg {
@@ -580,15 +581,11 @@
   }
 
   .search__container--active input {
-    width: 0;
-  }
-
-  .search__container--active input {
-    transform: scale(0);
+    display: none;
   }
 
   .search__container--active .search__close {
-    transform: scale(0);
+    display: none;
   }
 
   .container {
@@ -806,7 +803,11 @@
     margin-bottom: 11px;
   }
 
-  .article__preview-text {
+  .articles__item {
+    max-width: 100%;
+  }
+
+  .block__content {
     padding-top: 13px;
     padding-left: 22px;
   }
