@@ -376,7 +376,7 @@ h4 {
 }
 
 .header__logo {
-  margin-right: 179px;
+  margin-right: calc(11% + 3px);
 }
 
 .header__nav {
@@ -385,7 +385,7 @@ h4 {
 }
 
 .header__item:not(:last-child) {
-  margin-right: 62px;
+  margin-right: 14%;
 }
 
 .header__link {
@@ -862,6 +862,7 @@ h4 {
 
 .gallery__dropdown {
   position: absolute;
+  z-index: 100;
   width: 100%;
   height: 0;
   transition: all 0.2s;
@@ -1771,6 +1772,7 @@ h4 {
 
 .contacts__form {
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .form__input {

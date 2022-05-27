@@ -175,6 +175,7 @@ const swiperActions = new Swiper(".swiper__actions", {
     },
 
     769: {
+      slidesPerView: 3,
       spaceBetween: 27,
     },
     1025: {
