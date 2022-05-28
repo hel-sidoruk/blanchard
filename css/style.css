@@ -569,6 +569,17 @@ h4 {
   outline: none;
 }
 
+.dropdown__select--active.header__dropdown::after {
+  content: "";
+  position: absolute;
+  top: -55px;
+  right: 0;
+  bottom: 300px;
+  left: -35px;
+  width: 80%;
+  z-index: 1;
+}
+
 .dropdown__select--active.header__dropdown .dropdown__item:hover {
   padding-left: 19px;
 }
@@ -586,7 +597,10 @@ h4 {
   transition: opacity 0.5s;
 }
 
-.dropdown__item:focus::before,
+.dropdown__select--active.header__dropdown .dropdown__item:focus::before {
+  opacity: 1;
+}
+
 .dropdown__item:hover::before {
   opacity: 1;
 }
@@ -1699,7 +1713,7 @@ h4 {
   border: 1px solid var(--color-silver);
   background-repeat: no-repeat;
   background-position: center;
-  width: 449px;
+  max-width: 449px;
   height: 148px;
   filter: grayscale(1) opacity(0.5);
   cursor: pointer;
@@ -1707,8 +1721,7 @@ h4 {
 }
 
 .partners__card:focus {
-  outline: none;
-  border: 3px solid var(--color-lavender);
+  outline: 1px solid var(--color-lavender);
 }
 
 .partners__card:hover {

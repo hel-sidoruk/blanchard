@@ -23,48 +23,40 @@ menuLinks.forEach(function (link) {
 });
 
 // header dropdowns
-const btns = document.querySelectorAll(".dropdown__select");
+const selects = document.querySelectorAll(".dropdown__select");
 const dropdowns = document.querySelectorAll(".header__dropdown");
 const dropdownItem = document.querySelectorAll(".dropdown__item");
-const header = document.querySelector(".header__bottom");
 
-header.addEventListener("click", (event) => {
-  dropdowns.forEach((dropdown) => {
-    dropdown.classList.remove("dropdown__select--active");
-    dropdownItem.forEach((item) => {
-      item.removeAttribute("tabindex", "0");
-    });
-  });
-  btns.forEach((btn) => {
-    btn.classList.remove("dropdown__select--active");
-  });
-  const id = event.target.dataset.id;
-  if (id) {
-    event.target.classList.toggle("dropdown__select--active");
+selects.forEach(function (select) {
+  select.addEventListener("mouseover", function () {
+    const id = event.target.dataset.id;
     const element = document.getElementById(id);
-    element.classList.toggle("dropdown__select--active");
-    dropdownItem.forEach((item) => {
-      item.setAttribute("tabindex", "0");
-    });
-  }
+    element.classList.add("dropdown__select--active");
+  });
 });
 
-// Надо добавить доступность с клавиатуры
+dropdowns.forEach((dropdown)=>{
+  dropdown.addEventListener('mouseleave', ()=>{
+    dropdown.classList.remove("dropdown__select--active");
+  })
+})
 
-// btns.forEach(function (btn) {
-//   btn.addEventListener("keypress", function () {
-//     element.classList.toggle("dropdown__select--active");
-//     if (this.classList.contains("dropdown__select--active")) {
-//       dropdowns.forEach((item) => {
-//         item.setAttribute("tabindex", "0");
-//       });
-//     } else {
-//       dropdowns.forEach((item) => {
-//         item.removeAttribute("tabindex");
-//       });
-//     }
-//   });
-// });
+selects.forEach(function (select) {
+  select.addEventListener("focus", function () {
+    const id = event.target.dataset.id;
+    const element = document.getElementById(id);
+    element.classList.add("dropdown__select--active");
+  });
+});
+
+selects.forEach(function(select) {
+  select.addEventListener("blur", function () {
+    const id = event.target.dataset.id;
+    const element = document.getElementById(id);
+    element.classList.remove("dropdown__select--active");
+  });
+});
+
 
 //header scrollbar
 
@@ -341,41 +333,41 @@ function init() {
 
 // search
 
-const searchIcon = document.querySelector('.search__icon')
-const searchContainer = document.querySelector('.search__container')
-const searchClose = document.querySelector('.search__close')
-const searchClose320 = document.getElementById('close320')
+const searchIcon = document.querySelector(".search__icon");
+const searchContainer = document.querySelector(".search__container");
+const searchClose = document.querySelector(".search__close");
+const searchClose320 = document.getElementById("close320");
 
-searchIcon.addEventListener('click', ()=>{
-  addClassActive()
-})
+searchIcon.addEventListener("click", () => {
+  addClassActive();
+});
 
-searchIcon.addEventListener('keypress', ()=>{
-  addClassActive()
-})
+searchIcon.addEventListener("keypress", () => {
+  addClassActive();
+});
 
-searchClose.addEventListener('click', ()=>{
-  removeClassActive()
-})
+searchClose.addEventListener("click", () => {
+  removeClassActive();
+});
 
-searchClose.addEventListener('keypress', ()=>{
-  removeClassActive()
-})
+searchClose.addEventListener("keypress", () => {
+  removeClassActive();
+});
 
-searchClose320.addEventListener('click', ()=>{
-  removeClassActive()
-})
+searchClose320.addEventListener("click", () => {
+  removeClassActive();
+});
 
-searchClose320.addEventListener('keypress', ()=>{
-  removeClassActive()
-})
+searchClose320.addEventListener("keypress", () => {
+  removeClassActive();
+});
 
-function addClassActive(){
-  searchContainer.classList.add('search__container--active')
-  searchClose.setAttribute('tabindex', '0')
+function addClassActive() {
+  searchContainer.classList.add("search__container--active");
+  searchClose.setAttribute("tabindex", "0");
 }
 
-function removeClassActive(){
-  searchContainer.classList.remove('search__container--active')
-  searchClose.removeAttribute('tabindex')
+function removeClassActive() {
+  searchContainer.classList.remove("search__container--active");
+  searchClose.removeAttribute("tabindex");
 }
