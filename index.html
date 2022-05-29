@@ -28,9 +28,9 @@
         <div class="container">
           <div class="header__content flex">
             <button class="burger button">
-              <div class="burger__line"></div>
-              <div class="burger__line"></div>
-              <div class="burger__line"></div>
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
             </button>
             <a class="logo header__logo" href="#" aria-label="Логотип">
               <picture>
@@ -73,7 +73,7 @@
                   </a>
                 </li>
               </ul>
-              <button class="button header__link personal__link">
+              <button class="button header__link header__link-right">
                 <svg
                   width="13"
                   height="13"
@@ -89,9 +89,9 @@
                 Войти
               </button>
             </nav>
-            <div class="search__container">
-              <div class="searchbar__top">
-                <div class="search__icon" tabindex="0">
+            <div class="search">
+              <div class="search__top">
+                <div class="search-icon" tabindex="0">
                   <svg
                     width="30"
                     height="29"
@@ -114,11 +114,11 @@
                   </svg>
                 </div>
                 <input
-                  class="input input__search input__top"
+                  class="input search-input input-top"
                   type="text"
                   id="input__header"
                 />
-                <div class="search__close" id="close">
+                <div class="search-close" id="close">
                   <svg
                     width="23"
                     height="23"
@@ -143,7 +143,7 @@
               </div>
             </div>
             <div class="search320">
-              <div class="search__close320 search__close" id="close320">
+              <div class="search320__close search-close" id="close320">
                 <svg
                   width="23"
                   height="23"
@@ -165,8 +165,8 @@
                   />
                 </svg>
               </div>
-              <div class="search__bottom320">
-                <div class="search__icon320 search__icon" tabindex="0">
+              <div class="search320__bottom">
+                <div class="search320__icon search-icon" tabindex="0">
                   <svg
                     width="30"
                     height="29"
@@ -188,7 +188,7 @@
                     />
                   </svg>
                 </div>
-                <input class="input input320 input__search" type="text" />
+                <input class="input input320 search-input" type="text" />
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@
         <div class="container">
           <div class="header__content__bottom flex">
             <nav class="header__nav-bottom flex">
-              <div class="dropdown__block">
+              <div class="dropdown">
                 <div class="dropdown__select flex" data-id="step1" tabindex="0">
                   <span class="dropdown__title header__link"> Реализм </span>
                   <svg
@@ -212,7 +212,7 @@
                   </svg>
                 </div>
                 <div class="header__dropdown" id="step1">
-                  <ul class="list dropdown" id="scrollbar">
+                  <ul class="list dropdown__list" id="scrollbar">
                     <li
                       class="dropdown__item"
                       style="background-image: url('img/d1.jpg')"
@@ -288,7 +288,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="dropdown__block">
+              <div class="dropdown">
                 <div class="dropdown__select flex" data-id="step2" tabindex="0">
                   <span class="dropdown__title header__link">
                     Импрессионизм
@@ -304,7 +304,7 @@
                   </svg>
                 </div>
                 <div class="header__dropdown" id="step2">
-                  <ul class="list dropdown" id="scrollbar2">
+                  <ul class="list dropdown__list" id="scrollbar2">
                     <li
                       class="dropdown__item"
                       style="background-image: url('img/dd1.jpg')"
@@ -380,7 +380,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="dropdown__block">
+              <div class="dropdown">
                 <div class="dropdown__select flex" data-id="step3" tabindex="0">
                   <span class="dropdown__title header__link">
                     Постимпрессионизм
@@ -396,7 +396,7 @@
                   </svg>
                 </div>
                 <div class="header__dropdown" id="step3">
-                  <ul class="list dropdown" id="scrollbar3">
+                  <ul class="list dropdown__list" id="scrollbar3">
                     <li
                       class="dropdown__item"
                       style="background-image: url('img/ddd1.jpg')"
@@ -472,7 +472,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="dropdown__block">
+              <div class="dropdown">
                 <div class="dropdown__select flex" data-id="step4" tabindex="0">
                   <span class="dropdown__title header__link"> Авангард </span>
                   <svg
@@ -486,7 +486,7 @@
                   </svg>
                 </div>
                 <div class="header__dropdown" id="step4">
-                  <ul class="list dropdown" id="scrollbar4">
+                  <ul class="list dropdown__list" id="scrollbar4">
                     <li
                       class="dropdown__item"
                       style="background-image: url('img/dddd1.jpg')"
@@ -562,7 +562,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="dropdown__block">
+              <div class="dropdown">
                 <div class="dropdown__select flex" data-id="step5" tabindex="0">
                   <span class="dropdown__title header__link"> Футуризм </span>
                   <svg
@@ -576,7 +576,7 @@
                   </svg>
                 </div>
                 <div class="header__dropdown" id="step5">
-                  <ul class="list dropdown" id="scrollbar5">
+                  <ul class="list dropdown__list" id="scrollbar5">
                     <li
                       class="dropdown__item"
                       style="background-image: url('img/dr1.jpg')"
@@ -675,7 +675,7 @@
                 />
               </svg>
               <input
-                class="input input__search"
+                class="input search-input"
                 type="search"
                 placeholder="Поиск по сайту"
               />
@@ -778,10 +778,10 @@
         </div>
       </section>
 
-      <section class="about section__offset" id="about">
+      <section class="about offset" id="about">
         <div class="container">
           <div class="about__content">
-            <h2 class="section__title about__title">О нас</h2>
+            <h2 class="title about__title">О нас</h2>
             <p class="text about__text">
               Ясность нашей позиции очевидна: семантический разбор внешних
               противодействий однозначно определяет каждого участника как
@@ -801,12 +801,12 @@
         </div>
       </section>
 
-      <section class="gallery section__offset" id="gallery">
+      <section class="gallery offset" id="gallery">
         <div class="container gallery__container flex">
           <div class="gallery__left flex">
             <div class="gallery__top">
-              <h2 class="gallery__title section__title">Галерея</h2>
-              <span class="galler__subtitle"> Фильтр: </span>
+              <h2 class="gallery__title title">Галерея</h2>
+              <span class="gallery__subtitle"> Фильтр: </span>
               <div class="gallery__dropdown-block">
                 <div class="gallery__dropdown-select flex" tabindex="0">
                   <span class="gallery__dropdown-title text1"> Живопись </span>
@@ -826,7 +826,7 @@
                 </ul>
               </div>
             </div>
-            <ul class="list checkbox__list">
+            <ul class="list checkbox">
               <li class="checkbox__list-item">
                 <label for="check1">
                   <input
@@ -866,8 +866,8 @@
             </ul>
           </div>
           <div class="gallery__right">
-            <div class="swiper__gallery">
-              <div class="swiper__top flex">
+            <div class="gallery__swiper">
+              <div class="swiper-top flex">
                 <button
                   class="button gallery__swiper-button-prev gallery__button gallery__btn-l"
                 ></button>
@@ -1015,10 +1015,10 @@
         </div>
       </section>
 
-      <section class="catalog section__offset" id="catalog">
+      <section class="catalog offset" id="catalog">
         <div class="container">
           <div class="catalog__top">
-            <h2 class="section__title catalog__title">Каталог</h2>
+            <h2 class="title catalog__title">Каталог</h2>
             <p class="text catalog__text">
               Акционеры крупнейших компаний, которые представляют собой яркий
               пример континентально-европейского типа политической культуры,
@@ -1031,7 +1031,7 @@
           </div>
           <div class="catalog__bottom flex">
             <div class="catalog__left">
-              <div class="artist__descr" id="1">
+              <div class="artist" id="1">
                 <img
                   class="artist__image"
                   src="img/artists/1.jpg"
@@ -1055,7 +1055,7 @@
                   произведения Джованни да Милано.
                 </p>
               </div>
-              <div class="artist__descr" id="2">
+              <div class="artist" id="2">
                 <img
                   class="artist__image"
                   src="img/artists/2.jpg"
@@ -1081,7 +1081,7 @@
                   Луини.
                 </p>
               </div>
-              <div class="artist__descr" id="3">
+              <div class="artist" id="3">
                 <img
                   class="artist__image"
                   src="img/artists/3.jpg"
@@ -1107,7 +1107,7 @@
                   Огайо, США) и др.
                 </p>
               </div>
-              <div class="artist__descr" id="4">
+              <div class="artist" id="4">
                 <img
                   class="artist__image"
                   src="img/artists/4.jpg"
@@ -1135,7 +1135,7 @@
                   воспроизводящие эту фигуру.
                 </p>
               </div>
-              <div class="artist__descr" id="5">
+              <div class="artist" id="5">
                 <img
                   class="artist__image"
                   src="img/artists/5.jpg"
@@ -1164,7 +1164,7 @@
                   ныне входят в собрание Общественного музея Вероны.
                 </p>
               </div>
-              <div class="artist__descr" id="6">
+              <div class="artist" id="6">
                 <img
                   class="artist__image"
                   src="img/artists/6.jpg"
@@ -1187,7 +1187,7 @@
                   унаследовал мастерскую и продолжил работать в провинции.
                 </p>
               </div>
-              <div class="artist__descr artist__descr--active" id="7">
+              <div class="artist artist--active" id="7">
                 <img
                   class="artist__image"
                   src="img/artist.jpg"
@@ -1213,8 +1213,8 @@
               <ul class="list accordion catalog__list">
                 <li class="catalog__list-item ac">
                   <div class="ac-header catalog__item-top">
-                    <h3 href="#" class="catalog__header">C 1400 по 1499 гг.</h3>
-                    <div class="item__arrow"></div>
+                    <h3 class="catalog__header">C 1400 по 1499 гг.</h3>
+                    <div class="catalog__arrow"></div>
                   </div>
                   <div class="accordion__panel">
                     <span class="accordion__item" data-id="1"
@@ -1281,8 +1281,8 @@
                 </li>
                 <li class="catalog__list-item">
                   <div class="ac-header catalog__item-top">
-                    <h3 href="#" class="catalog__header">C 1500 по 1599 гг.</h3>
-                    <div class="item__arrow"></div>
+                    <h3 class="catalog__header">C 1500 по 1599 гг.</h3>
+                    <div class="catalog__arrow"></div>
                   </div>
                   <div class="accordion__panel">
                     <span class="accordion__item" data-id="1"
@@ -1349,8 +1349,8 @@
                 </li>
                 <li class="catalog__list-item">
                   <div class="ac-header catalog__item-top">
-                    <h3 href="#" class="catalog__header">C 1600 по 1699 гг.</h3>
-                    <div class="item__arrow"></div>
+                    <h3 class="catalog__header">C 1600 по 1699 гг.</h3>
+                    <div class="catalog__arrow"></div>
                   </div>
                   <div class="accordion__panel">
                     <span class="accordion__item" data-id="1"
@@ -1417,8 +1417,8 @@
                 </li>
                 <li class="catalog__list-item">
                   <div class="ac-header catalog__item-top">
-                    <h3 href="#" class="catalog__header">C 1700 по 1799 гг.</h3>
-                    <div class="item__arrow"></div>
+                    <h3 class="catalog__header">C 1700 по 1799 гг.</h3>
+                    <div class="catalog__arrow"></div>
                   </div>
                   <div class="accordion__panel">
                     <span class="accordion__item" data-id="1"
@@ -1485,8 +1485,8 @@
                 </li>
                 <li class="catalog__list-item">
                   <div class="ac-header catalog__item-top">
-                    <h3 href="#" class="catalog__header">C 1800 по 1899 гг.</h3>
-                    <div class="item__arrow"></div>
+                    <h3 class="catalog__header">C 1800 по 1899 гг.</h3>
+                    <div class="catalog__arrow"></div>
                   </div>
                   <div class="accordion__panel">
                     <span class="accordion__item" data-id="1"
@@ -1553,8 +1553,8 @@
                 </li>
                 <li class="catalog__list-item">
                   <div class="ac-header catalog__item-top">
-                    <h3 href="#" class="catalog__header">C 1900 по 1999 гг.</h3>
-                    <div class="item__arrow"></div>
+                    <h3 class="catalog__header">C 1900 по 1999 гг.</h3>
+                    <div class="catalog__arrow"></div>
                   </div>
                   <div class="accordion__panel">
                     <span class="accordion__item" data-id="1"
@@ -1621,8 +1621,8 @@
                 </li>
                 <li class="catalog__list-item">
                   <div class="ac-header catalog__item-top">
-                    <h3 href="#" class="catalog__header">C 2000 г.</h3>
-                    <div class="item__arrow"></div>
+                    <h3 class="catalog__header">C 2000 г.</h3>
+                    <div class="catalog__arrow"></div>
                   </div>
                   <div class="accordion__panel">
                     <span class="accordion__item" data-id="1"
@@ -1693,146 +1693,146 @@
         </div>
       </section>
 
-      <section class="actions section__offset" id="actions">
+      <section class="actions offset" id="actions">
         <div class="container">
-          <h2 class="actions__title section__title">События</h2>
-          <div class="action__container">
-            <div class="swiper__actions">
-              <div class="swiper-wrapper block__section">
+          <h2 class="actions__title title">События</h2>
+          <div class="actions__container">
+            <div class="actions__swiper">
+              <div class="swiper-wrapper articles">
                 <article class="articles__item swiper-slide">
                   <img
-                    class="article__preview-image"
+                    class="articles__preview-image"
                     src="img/act1.jpg"
                     alt="Article photo"
                   />
-                  <div class="block__content">
-                    <span class="article__date">
+                  <div class="articles__content">
+                    <span class="articles__date">
                       Музей им. Щусева
                       с&nbsp;20&nbsp;марта&nbsp;по&nbsp;30&nbsp;апреля
                     </span>
-                    <h3 class="article__preview-title art-1">
+                    <h3 class="articles__preview-title art-1">
                       Книжная гравюра в живом восприятии
                     </h3>
-                    <p class="article__preview-descr text1">
+                    <p class="articles__preview-descr text1">
                       Один из ведущих флорентийских художников Кватроченто,
                       основатель художественной династии, которую продолжили его
                       брат Давид и сын Ридольфо.
                     </p>
-                    <a class="article__link text1" href="#">Подробнее</a>
+                    <a class="articles__link text1" href="#">Подробнее</a>
                   </div>
                 </article>
                 <article class="articles__item swiper-slide">
                   <img
-                    class="article__preview-image"
+                    class="articles__preview-image"
                     src="img/act2.jpg"
                     alt="Article photo"
                   />
-                  <div class="block__content">
-                    <span class="article__date">
+                  <div class="articles__content">
+                    <span class="articles__date">
                       ММОМА 24&nbsp;марта&nbsp;19:00
                     </span>
-                    <h3 class="article__preview-title">
+                    <h3 class="articles__preview-title">
                       «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
                     </h3>
-                    <p class="article__preview-descr text1">
+                    <p class="articles__preview-descr text1">
                       Высокий уровень вовлечения представителей целевой
                       аудитории является четким доказательством простого факта.
                     </p>
-                    <a class="article__link text1" href="#">Подробнее</a>
+                    <a class="articles__link text1" href="#">Подробнее</a>
                   </div>
                 </article>
                 <article class="articles__item swiper-slide">
                   <img
-                    class="article__preview-image"
+                    class="articles__preview-image"
                     src="img/act3.jpg"
                     alt="Article photo"
                   />
-                  <div class="block__content">
-                    <span class="article__date">
+                  <div class="articles__content">
+                    <span class="articles__date">
                       Еврейский музей
                       с&nbsp;31&nbsp;марта&nbsp;по&nbsp;21&nbsp;апреля
                     </span>
-                    <h3 class="article__preview-title">
+                    <h3 class="articles__preview-title">
                       Выставка «Формация 2020»
                     </h3>
-                    <p class="article__preview-descr text1">
+                    <p class="articles__preview-descr text1">
                       Идейные соображения высшего порядка, а также современная
                       методология разработки играет важную роль в формировании
                       глубокомысленных рассуждений.
                     </p>
-                    <a class="article__link text1" href="#">Подробнее</a>
+                    <a class="articles__link text1" href="#">Подробнее</a>
                   </div>
                 </article>
                 <article class="articles__item swiper-slide">
                   <img
-                    class="article__preview-image"
+                    class="articles__preview-image"
                     src="img/act1.jpg"
                     alt="Article photo"
                   />
-                  <div class="block__content">
-                    <span class="article__date">
+                  <div class="articles__content">
+                    <span class="articles__date">
                       Музей им. Щусева
                       с&nbsp;20&nbsp;марта&nbsp;по&nbsp;30&nbsp;апреля
                     </span>
-                    <h3 class="article__preview-title art-1">
+                    <h3 class="articles__preview-title art-1">
                       Книжная гравюра в живом восприятии
                     </h3>
-                    <p class="article__preview-descr text1">
+                    <p class="articles__preview-descr text1">
                       Один из ведущих флорентийских художников Кватроченто,
                       основатель художественной династии, которую продолжили его
                       брат Давид и сын Ридольфо.
                     </p>
-                    <a class="article__link text1" href="#">Подробнее</a>
+                    <a class="articles__link text1" href="#">Подробнее</a>
                   </div>
                 </article>
                 <article class="articles__item swiper-slide">
                   <img
-                    class="article__preview-image"
+                    class="articles__preview-image"
                     src="img/act4.jpg"
                     alt="Article photo"
                   />
-                  <div class="block__content">
-                    <span class="article__date">
+                  <div class="articles__content">
+                    <span class="articles__date">
                       Третьяковка на Крымском валу с 30 марта по 30 апреля
                     </span>
-                    <h3 class="article__preview-title">
+                    <h3 class="articles__preview-title">
                       XXIV Международная биеннале молодого искусства
                     </h3>
-                    <p class="article__preview-descr text1">
+                    <p class="articles__preview-descr text1">
                       Внезапно, реплицированные с зарубежных источников,
                       современные исследования.
                     </p>
-                    <a class="article__link text1" href="#">Подробнее</a>
+                    <a class="articles__link text1" href="#">Подробнее</a>
                   </div>
                 </article>
                 <article class="articles__item swiper-slide">
                   <img
-                    class="article__preview-image"
+                    class="articles__preview-image"
                     src="img/act5.jpg"
                     alt="Article photo"
                   />
-                  <div class="block__content">
-                    <span class="article__date">
+                  <div class="articles__content">
+                    <span class="articles__date">
                       ММАМ с 8 апреля по 20 мая
                     </span>
-                    <h3 class="article__preview-title">
+                    <h3 class="articles__preview-title">
                       Джон Винзор. Фотографии из серии «Метафора серебра»
                     </h3>
-                    <p class="article__preview-descr text1">
+                    <p class="articles__preview-descr text1">
                       Один из ведущих флорентийских художников Кватроченто,
                       основатель художественной династии, которую продолжили его
                       брат Давид и сын Ридольфо.
                     </p>
-                    <a class="article__link text1" href="#">Подробнее</a>
+                    <a class="articles__link text1" href="#">Подробнее</a>
                   </div>
                 </article>
               </div>
             </div>
             <button
-              class="button articles__btn navigation__button btn__prev"
+              class="button actions__btn navigation-button btn-prev"
             ></button>
             <button
-              class="button articles__btn navigation__button btn__next"
+              class="button actions__btn navigation-button btn-next"
             ></button>
             <div class="actions__swiper-pagination"></div>
           </div>
@@ -1842,7 +1842,7 @@
       <section class="projects" id="projects">
         <div class="container">
           <div class="projects__top">
-            <h2 class="section__title projects__title">Проекты</h2>
+            <h2 class="title projects__title">Проекты</h2>
             <div class="projects__top-text">
               <p class="text projects__text">
                 Предварительные выводы: постоянное
@@ -1877,8 +1877,9 @@
                   <img
                     class="tooltip__image"
                     src="img/triangle.svg"
-                    width="14px"
-                    height="9px"
+                    width="14"
+                    height="9"
+                    alt="Tooltip triangle"
                   />
                 </span>
               </span>
@@ -1912,8 +1913,9 @@
                   <img
                     class="tooltip__image"
                     src="img/triangle.svg"
-                    width="14px"
-                    height="9px"
+                    width="14"
+                    height="9"
+                    alt="Tooltip triangle"
                   />
                 </span>
               </span>
@@ -1945,8 +1947,9 @@
                   <img
                     class="tooltip__image"
                     src="img/triangle.svg"
-                    width="14px"
-                    height="9px"
+                    width="14"
+                    height="9"
+                    alt="Tooltip triangle"
                   />
                 </span>
               </span>
@@ -1964,7 +1967,7 @@
           </div>
           <div class="projects__bottom">
             <h3 class="projects__bottom-title">Партнёры проектов:</h3>
-            <div class="partners__block">
+            <div class="partners">
               <div class="swiper-partners">
                 <div class="swiper-wrapper partners-s">
                   <div class="swiper-slide">
@@ -2035,18 +2038,18 @@
               </div>
 
               <button
-                class="button projects__button navigation__button prev swiper-button-prev"
+                class="button projects__button navigation-button prev swiper-button-prev"
                 id="projects-prev"
               ></button>
               <button
-                class="button projects__button navigation__button next swiper-button-next"
+                class="button projects__button navigation-button next swiper-button-next"
                 id="projects-next"
               ></button>
             </div>
           </div>
         </div>
       </section>
-      <section class="contacts" id="contacts">
+      <div class="contacts" id="contacts">
         <div class="container">
           <div class="contacts__top flex">
             <div class="contacts__left">
@@ -2062,42 +2065,42 @@
                 method="post"
               >
                 <input
-                  class="input form__input"
+                  class="input contacts__input"
                   type="text"
                   name="name"
                   placeholder="Имя*"
                   required
                 />
                 <input
-                  class="input form__input"
+                  class="input contacts__input"
                   type="tel"
                   name="tel"
                   placeholder="Телефон*"
                   required
                 />
-                <button class="button form__button" type="submit">
+                <button class="button contacts__button" type="submit">
                   Заказать обратный звонок
                 </button>
-                <button class="button form__button f-320">Заказать</button>
+                <button class="button contacts__button f-320">Заказать</button>
               </form>
             </div>
             <div class="contacts__right">
               <span class="contacts__title contacts__title-bottom">
                 Связаться в один клик
               </span>
-              <ul class="list icon__list flex">
-                <li class="icon__item contacts__icon-item">
+              <ul class="list icon-list flex">
+                <li class="icon-item contacts__icon-item">
                   <a
-                    class="icon__link contacts__link"
+                    class="icon-link contacts__link"
                     aria-label="переход в вотсап"
                     href="#"
                   >
                     <img src="img/what.svg" alt="whatsapp icon" />
                   </a>
                 </li>
-                <li class="icon__item contacts__icon-item">
+                <li class="icon-item contacts__icon-item">
                   <a
-                    class="icon__link contacts__link"
+                    class="icon-link contacts__link"
                     aria-label="переход в телеграм"
                     href="#"
                   >
@@ -2108,7 +2111,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
       <div class="map">
         <div id="map" style="width: 100%"></div>
       </div>
@@ -2120,15 +2123,16 @@
           <a class="logo footer__logo" href="#" aria-label="Логотип">
             <picture>
               <source media="(min-width: 1025px)" srcset="img/logo.svg" />
+              <source media="(min-width: 768px)" srcset="img/footer-logo-1024.svg" />
               <source media="(min-width: 577px)" srcset="img/logo-1024.svg" />
               <source media="(max-width: 576px)" srcset="img/logo-320.svg" />
               <img class="logo__image" src="img/logo.svg" alt="Logo" />
             </picture>
           </a>
-          <ul class="list icon__list flex">
-            <li class="icon__item">
+          <ul class="list icon-list flex">
+            <li class="icon-item footer__icon-item">
               <a
-                class="footer__icon-link icon__link"
+                class="footer__icon-link icon-link"
                 aria-label="переход на страницу вконтакте"
                 href="#"
               >
@@ -2146,9 +2150,9 @@
                 </svg>
               </a>
             </li>
-            <li class="icon__item">
+            <li class="icon-item footer__icon-item">
               <a
-                class="footer__icon-link icon__link"
+                class="footer__icon-link icon-link"
                 aria-label="переход на страницу инстаграм"
                 href="#"
               >
@@ -2174,9 +2178,9 @@
                 </svg>
               </a>
             </li>
-            <li class="icon__item">
+            <li class="icon-item footer__icon-item">
               <a
-                class="footer__icon-link icon__link"
+                class="footer__icon-link icon-link"
                 aria-label="переход на страницу фэйсбук"
                 href="#"
               >
@@ -2198,10 +2202,7 @@
         </div>
       </div>
     </footer>
-    <script
-      src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
-      type="text/javascript"
-    ></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

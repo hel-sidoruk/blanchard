@@ -36,7 +36,7 @@ selects.forEach(function (select) {
 });
 
 dropdowns.forEach((dropdown)=>{
-  dropdown.addEventListener('mouseleave', ()=>{
+  dropdown.addEventListener('mouseleave', function () {
     dropdown.classList.remove("dropdown__select--active");
   })
 })
@@ -101,7 +101,7 @@ const swiper = new Swiper(".swiper", {
 
 // gallery slider
 
-const swiperGallery = new Swiper(".swiper__gallery", {
+const swiperGallery = new Swiper(".gallery__swiper", {
   pagination: {
     el: ".gallery__swiper-pagination",
     type: "fraction",
@@ -142,10 +142,10 @@ const swiperGallery = new Swiper(".swiper__gallery", {
 
 // actions slider
 
-const swiperActions = new Swiper(".swiper__actions", {
+const swiperActions = new Swiper(".actions__swiper", {
   navigation: {
-    nextEl: ".btn__next",
-    prevEl: ".btn__prev",
+    nextEl: ".btn-next",
+    prevEl: ".btn-prev",
   },
 
   pagination: {
@@ -168,7 +168,7 @@ const swiperActions = new Swiper(".swiper__actions", {
 
     769: {
       slidesPerView: 3,
-      spaceBetween: 27,
+      spaceBetween: 24,
     },
     1025: {
       slidesPerView: 3,
@@ -287,7 +287,7 @@ $(".accordion").accordion({
 // tabs
 
 const tabsButtons = document.querySelectorAll(".accordion__item");
-const tabsItems = document.querySelectorAll(".artist__descr");
+const tabsItems = document.querySelectorAll(".artist");
 
 tabsButtons.forEach(function (tabButton) {
   tabButton.addEventListener("click", function () {
@@ -297,15 +297,15 @@ tabsButtons.forEach(function (tabButton) {
     console.log(currentTab);
 
     tabsButtons.forEach(function (tabButton) {
-      tabButton.classList.remove("artist__descr--active");
+      tabButton.classList.remove("artist--active");
     });
 
     tabsItems.forEach(function (currentTab) {
-      currentTab.classList.remove("artist__descr--active");
+      currentTab.classList.remove("artist--active");
     });
 
-    tabButton.classList.add("artist__descr--active");
-    currentTab.classList.add("artist__descr--active");
+    tabButton.classList.add("artist--active");
+    currentTab.classList.add("artist--active");
   });
 });
 
@@ -333,9 +333,9 @@ function init() {
 
 // search
 
-const searchIcon = document.querySelector(".search__icon");
-const searchContainer = document.querySelector(".search__container");
-const searchClose = document.querySelector(".search__close");
+const searchIcon = document.querySelector(".search-icon");
+const searchContainer = document.querySelector(".search");
+const searchClose = document.querySelector(".search-close");
 const searchClose320 = document.getElementById("close320");
 
 searchIcon.addEventListener("click", () => {
@@ -363,11 +363,11 @@ searchClose320.addEventListener("keypress", () => {
 });
 
 function addClassActive() {
-  searchContainer.classList.add("search__container--active");
+  searchContainer.classList.add("search--active");
   searchClose.setAttribute("tabindex", "0");
 }
 
 function removeClassActive() {
-  searchContainer.classList.remove("search__container--active");
+  searchContainer.classList.remove("search--active");
   searchClose.removeAttribute("tabindex");
 }
