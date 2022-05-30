@@ -35,11 +35,11 @@ selects.forEach(function (select) {
   });
 });
 
-dropdowns.forEach((dropdown)=>{
-  dropdown.addEventListener('mouseleave', function () {
+dropdowns.forEach((dropdown) => {
+  dropdown.addEventListener("mouseleave", function () {
     dropdown.classList.remove("dropdown__select--active");
-  })
-})
+  });
+});
 
 selects.forEach(function (select) {
   select.addEventListener("focus", function (e) {
@@ -49,14 +49,13 @@ selects.forEach(function (select) {
   });
 });
 
-selects.forEach(function(select) {
+selects.forEach(function (select) {
   select.addEventListener("blur", function (e) {
     const id = e.currentTarget.dataset.id;
     const element = document.getElementById(id);
     element.classList.remove("dropdown__select--active");
   });
 });
-
 
 //header scrollbar
 
@@ -263,32 +262,30 @@ dropdownItems.forEach(function (dropdownItem) {
 
 // gallery popup
 
-const gallery = document.querySelector('.gallery')
-const galleryModals = document.querySelectorAll('.gallery__modal')
-const popupElements = document.querySelectorAll('.popup')
-const closeIcons = document.querySelectorAll('.popup__close')
+const overlay = document.getElementById("overlay");
+const galleryModals = document.querySelectorAll(".gallery__modal");
+const popupElements = document.querySelectorAll(".popup");
+const closeIcons = document.querySelectorAll(".popup__close");
 
-popupElements.forEach(function(popupElement){
-  popupElement.classList.remove('popup--active')
-})
+popupElements.forEach(function (popupElement) {
+  popupElement.classList.remove("popup--active");
+});
 
-galleryModals.forEach(function (galleryModal){
-  galleryModal.addEventListener('click', function (e) {
+galleryModals.forEach(function (galleryModal) {
+  galleryModal.addEventListener("click", function (e) {
     const path = e.currentTarget.dataset.path;
     const popupWindow = document.getElementById(path);
 
-    popupWindow.classList.add('popup--active');
-    gallery.classList.add('gallery--active')
-    document.body.classList.add("stop-scroll")
-    closeIcons.forEach(function(closeIcon){
-      closeIcon.addEventListener('click', function(){
-        popupWindow.classList.remove('popup--active')
-        document.body.classList.remove("stop-scroll")
-        gallery.classList.remove('gallery--active')
-      })
-    })
-  })
-})
+    popupWindow.classList.add("popup--active");
+    overlay.classList.add("overlay--active");
+    closeIcons.forEach(function (closeIcon) {
+      closeIcon.addEventListener("click", function () {
+        popupWindow.classList.remove("popup--active");
+        overlay.classList.remove("overlay--active");
+      });
+    });
+  });
+});
 
 // tooltip
 
@@ -399,3 +396,59 @@ function removeClassActive() {
   searchContainer.classList.remove("search--active");
   searchClose.removeAttribute("tabindex");
 }
+
+// validation
+
+
+var selector = document.querySelector("input[type='tel']");
+
+var im = new Inputmask("+7 (999) 999-99-99");
+
+im.mask(selector);
+
+const validation = new JustValidate('#form', {
+  errorFieldCssClass: 'is-invalid',
+  errorLabelStyle: {
+    fontSize: '14px',
+    color: '#dc3545',
+  },
+  focusInvalidField: true,
+  lockForm: true,
+
+  rules:{
+    name: {
+      required: true
+    },
+    tel: {
+      required: true,
+    },
+  },
+});
+
+validation
+  .addField('#name', [
+    {
+      rule: 'required',
+      errorMessage: 'Введите ваше имя'
+    },
+    {
+      rule: 'minLength',
+      value: 2,
+      errorMessage: 'Недопустимый формат'
+    },
+    {
+      rule: 'maxLength',
+      value: 20,
+    },
+  ])
+  .addField('#tel', [
+    {
+      rule: 'required',
+      errorMessage: 'Введите телефон'
+    },
+    {
+      rule: 'minLength',
+      value: 11,
+      rrorMessage: 'Введите корректный телефон'
+    },
+  ])

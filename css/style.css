@@ -821,30 +821,33 @@ h4 {
   position: relative;
 }
 
-.gallery::after {
-  content: "";
-  position: absolute;
-  z-index: -10;
-  top: -700px;
-  width: 100vw;
-  height: 200vh;
+.overlay {
+  pointer-events: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
+  transition: opacity .4s;
 }
 
-.gallery--active::after {
-  z-index: 10;
+.overlay--active {
   opacity: 1;
 }
 
 .popup {
   position: fixed;
-  top: 25%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%) ;
-  z-index: 500;
+  transform: translate(-50%, -50%) ;
+  z-index: 1001;
   width: 900px;
   min-height: 500px;
+  max-width: 70%;
+  max-height: 70%;
   background-color: var(--color-white);
   box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.8);
   display: none;
@@ -862,6 +865,7 @@ h4 {
 
 .popup__right {
   padding: 48px;
+  overflow-y: auto;
   padding-top: 122px;
 }
 
@@ -1914,6 +1918,20 @@ h4 {
 .contacts__form {
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: -6%;
+}
+
+.just-validate-error-label:nth-child(5) {
+  left: 25px;
+}
+
+.just-validate-error-label:nth-child(6) {
+  left: 315px;
 }
 
 .contacts__input {
