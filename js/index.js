@@ -313,6 +313,7 @@ $(".accordion").accordion({
 
 const tabsButtons = document.querySelectorAll(".accordion__item");
 const tabsItems = document.querySelectorAll(".artist");
+const catalogElement = document.querySelector('.catalog__left')
 
 tabsButtons.forEach(function (tabButton) {
   tabButton.addEventListener("click", function () {
@@ -333,6 +334,14 @@ tabsButtons.forEach(function (tabButton) {
     currentTab.classList.add("artist--active");
   });
 });
+
+tabsButtons.forEach((tabsButton)=>{
+  tabsButton.addEventListener('click', scrollToElement)
+})
+
+function scrollToElement() {
+  catalogElement.scrollIntoView({block: "center", behavior: "smooth"})
+}
 
 // map
 
