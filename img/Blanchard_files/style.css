@@ -417,6 +417,7 @@ h4 {
   background-image: url(../img/gallery.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .gallery__left {

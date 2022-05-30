@@ -199,10 +199,6 @@
     transition: transform 0.4s, top 0.4s, left 0.4s;
   }
 
-  .stop-scroll {
-    overflow: hidden;
-  }
-
   /* hero */
 
   .swiper-box {
@@ -234,6 +230,15 @@
   }
 
   /* gallery */
+
+  .popup {
+    width: 594px;
+    min-height: 594px;
+  }
+
+  .popup__image {
+    width: 264px;
+  }
 
   .gallery__left {
     width: calc(36% - 52px);

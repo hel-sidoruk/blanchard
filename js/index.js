@@ -28,8 +28,8 @@ const dropdowns = document.querySelectorAll(".header__dropdown");
 const dropdownItem = document.querySelectorAll(".dropdown__item");
 
 selects.forEach(function (select) {
-  select.addEventListener("mouseover", function () {
-    const id = event.target.dataset.id;
+  select.addEventListener("mouseover", function (e) {
+    const id = e.currentTarget.dataset.id;
     const element = document.getElementById(id);
     element.classList.add("dropdown__select--active");
   });
@@ -42,16 +42,16 @@ dropdowns.forEach((dropdown)=>{
 })
 
 selects.forEach(function (select) {
-  select.addEventListener("focus", function () {
-    const id = event.target.dataset.id;
+  select.addEventListener("focus", function (e) {
+    const id = e.currentTarget.dataset.id;
     const element = document.getElementById(id);
     element.classList.add("dropdown__select--active");
   });
 });
 
 selects.forEach(function(select) {
-  select.addEventListener("blur", function () {
-    const id = event.target.dataset.id;
+  select.addEventListener("blur", function (e) {
+    const id = e.currentTarget.dataset.id;
     const element = document.getElementById(id);
     element.classList.remove("dropdown__select--active");
   });
@@ -217,7 +217,6 @@ const swiperPartners = new Swiper(".swiper-partners", {
 });
 
 // gallery dropdown
-// Надо будет написать одну функцию
 
 const galleryDropdown = document.querySelector(".gallery__dropdown-select");
 const dropdownTitle = document.querySelector(".gallery__dropdown-title");
@@ -261,6 +260,35 @@ dropdownItems.forEach(function (dropdownItem) {
     galleryDropdown.classList.toggle("gallery__dropdown-select--active");
   });
 });
+
+// gallery popup
+
+const gallery = document.querySelector('.gallery')
+const galleryModals = document.querySelectorAll('.gallery__modal')
+const popupElements = document.querySelectorAll('.popup')
+const closeIcons = document.querySelectorAll('.popup__close')
+
+popupElements.forEach(function(popupElement){
+  popupElement.classList.remove('popup--active')
+})
+
+galleryModals.forEach(function (galleryModal){
+  galleryModal.addEventListener('click', function (e) {
+    const path = e.currentTarget.dataset.path;
+    const popupWindow = document.getElementById(path);
+
+    popupWindow.classList.add('popup--active');
+    gallery.classList.add('gallery--active')
+    document.body.classList.add("stop-scroll")
+    closeIcons.forEach(function(closeIcon){
+      closeIcon.addEventListener('click', function(){
+        popupWindow.classList.remove('popup--active')
+        document.body.classList.remove("stop-scroll")
+        gallery.classList.remove('gallery--active')
+      })
+    })
+  })
+})
 
 // tooltip
 
